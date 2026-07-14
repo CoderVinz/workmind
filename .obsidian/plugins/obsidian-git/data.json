@@ -1,0 +1,8 @@
+{
+  "autoSaveInterval": 10,
+  "autoPushInterval": 0,
+  "autoPullInterval": 0,
+  "autoPullOnBoot": false,
+  "pullBeforePush": false,
+  "disablePush": true
+}

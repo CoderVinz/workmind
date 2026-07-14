@@ -136,3 +136,5 @@ _attachments/
 # workmind: engineering layer — committed on purpose
 !wiki/meta/engineering.base
 !.vault-meta/mode.json
+# obsidian-git ships pre-configured: auto-commit only, push/pull disabled
+!.obsidian/plugins/obsidian-git/data.json

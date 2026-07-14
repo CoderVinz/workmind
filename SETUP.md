@@ -83,7 +83,7 @@ ln -s "$VAULT_WSL/skills" ~/.opencode/skills/workmind
 1. Run `bash bin/setup-vault.sh` from the vault root (downloads the Excalidraw plugin binary, not tracked in git).
 2. Open Obsidian → Open folder as vault → `VAULT_WIN`.
 3. Trust the vault and enable community plugins when prompted.
-4. obsidian-git plugin: enable **auto-commit only** — turn OFF auto-push and auto-pull (push is disabled at the git level anyway, but keep the plugin from erroring).
+4. obsidian-git ships pre-installed and pre-configured (auto-commit every 10 min, push/pull disabled — settings are committed in `.obsidian/plugins/obsidian-git/data.json`). Just verify in Settings → Community plugins that it is enabled; don't turn push back on.
 
 ## 6. Scaffold the wiki
 
