@@ -69,11 +69,24 @@ wiki/
 | Figured out a company process | `process` | `areas/team/processes/<name>.md` |
 | Project finished | — | move `projects/<slug>/` → `archives/<year>/<slug>/`, set `_project.md` status: archived |
 
-Cross-project note → `project: cross`. Unsure which project → ask, don't guess.
+Cross-project note → see next section. Unsure which project → ask, don't guess.
+
+## Cross-project and project-less knowledge
+
+The rule: **knowledge lives once, links many times. Never duplicate a note into two projects.**
+
+- **Belongs to no project** → it doesn't go in `projects/` at all. Reusable knowledge (how something works, patterns, snippets, tech gotchas, glossary) → `resources/`. Ongoing duties (ops, team, design system) → `areas/`. Projects are only for work with an outcome and an end.
+- **Knowledge shared by 2+ projects** → same thing: it's reference, so it lives in `resources/` (or on the relevant technology/service page), and each `_project.md` wikilinks it. If both projects hit the same postgres quirk, that's a Gotcha on the [[postgres]] tech page, not two bug notes.
+- **A decision/bug/improvement that concretely affects 2+ projects** → file it ONCE, in the project where it surfaced (or the one owning the fix), and set `project:` to a list: `project: [slug-a, slug-b]`. Wikilink it from the other project's `_project.md`. Dashboards filter with `project.contains("slug-a")`.
+- **Promotion**: when a note written inside one project turns out to matter to a second one, promote it — move the file to `resources/` (or merge into the tech/service page), leave wikilinks from both projects. Move, don't copy; update `related:` links after moving.
+
+Litmus test when filing: "if this project ended tomorrow, is the note dead?" Dead with the project → `projects/<slug>/`. Still useful → `resources/`/`areas/`.
 
 ## Frontmatter contract
 
 Every engineering note carries `type`, `title`, `project`, `status`, `created`, `updated`, `tags`. Dashboards (engineering.base) key on these — a note with missing `type`/`project`/`status` is invisible to them. `wiki-lint` should flag violations.
+
+`project:` is a single slug, a list (`[slug-a, slug-b]` for notes affecting several projects), or `cross` for company-wide notes with no specific project.
 
 Status lifecycles:
 
