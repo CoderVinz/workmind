@@ -12,7 +12,9 @@ Work second brain — Obsidian vault + agent wiki machinery, portable across wor
 | `skills/`, `commands/`, `agents/`, `hooks/` | Agent wiki machinery (/wiki, /save, /distill, wiki-query, ...) |
 | `scripts/`, `bin/`, `Makefile` | Retrieval/index tooling and setup scripts |
 | `wiki/` | Starter scaffold only — real content grows locally, never pushed |
-| `_templates/` | Note templates |
+| `wiki/references/engineering-conventions.md` | Multi-project engineering layer: PARA layout, routing table, note lifecycles |
+| `wiki/meta/engineering.base` | Dashboards: active projects, open bugs, improvement backlog, decisions, incidents, runbooks |
+| `_templates/` | Note templates — project, bug, decision, improvement, runbook, incident, design, meeting, snippet |
 | `.obsidian/` | Obsidian config + plugins |
 
 ## Quick start (work laptop)

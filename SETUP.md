@@ -87,11 +87,17 @@ ln -s "$VAULT_WSL/skills" ~/.opencode/skills/workmind
 
 ## 6. Scaffold the wiki
 
-The tracked `wiki/` is a generic starter. In the agent, at the vault root, say:
+The vault is pre-configured in **PARA mode** (`.vault-meta/mode.json`, committed) with an engineering layer for multi-project dev/ops/design work — see `wiki/references/engineering-conventions.md` for the layout, routing table, and note lifecycles. Dashboards: open `wiki/meta/engineering.base` in Obsidian.
+
+In the agent, at the vault root, say:
 
 > set up wiki: `WIKI_TOPIC`
 
-The `wiki` skill scaffolds structure (hot cache, index, MOCs) for the domain. Commit the scaffold locally.
+The `wiki` skill scaffolds the domain specifics (hot cache, overview). Then for each active project:
+
+> new project: `<name>` — creates `wiki/projects/<slug>/_project.md` from `_templates/project.md` per the conventions doc
+
+Commit the scaffold locally.
 
 ## 7. Content rules — read this, future me
 

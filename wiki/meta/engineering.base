@@ -1,0 +1,114 @@
+filters:
+  and:
+    - file.inFolder("wiki")
+    - file.ext == "md"
+formulas:
+  age_days: (now() - file.mtime).days
+properties:
+  project:
+    displayName: Project
+  type:
+    displayName: Type
+  status:
+    displayName: Status
+  severity:
+    displayName: Severity
+  effort:
+    displayName: Effort
+  impact:
+    displayName: Impact
+  updated:
+    displayName: Updated
+  last_verified:
+    displayName: Last Verified
+views:
+  - type: table
+    name: Active Projects
+    filters:
+      and:
+        - type == "project"
+        - status == "active"
+    order:
+      - file.name
+      - deadline
+      - updated
+  - type: table
+    name: Open Bugs
+    filters:
+      and:
+        - type == "bug"
+        - or:
+            - status == "open"
+            - status == "investigating"
+    groupBy:
+      property: project
+      direction: ASC
+    order:
+      - file.name
+      - severity
+      - status
+      - updated
+  - type: table
+    name: Improvement Backlog
+    filters:
+      and:
+        - type == "improvement"
+        - or:
+            - status == "idea"
+            - status == "planned"
+            - status == "in-progress"
+    groupBy:
+      property: project
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - effort
+      - impact
+      - updated
+  - type: table
+    name: Decision Log
+    filters:
+      and:
+        - type == "decision"
+    groupBy:
+      property: project
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - updated
+  - type: table
+    name: Incidents
+    filters:
+      and:
+        - type == "incident"
+    order:
+      - file.name
+      - severity
+      - status
+      - started
+  - type: table
+    name: Runbooks
+    filters:
+      and:
+        - type == "runbook"
+    order:
+      - file.name
+      - service
+      - last_verified
+  - type: table
+    name: Fixed Bugs (History)
+    filters:
+      and:
+        - type == "bug"
+        - or:
+            - status == "fixed"
+            - status == "wontfix"
+    groupBy:
+      property: project
+      direction: ASC
+    order:
+      - file.name
+      - severity
+      - updated

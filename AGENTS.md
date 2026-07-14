@@ -61,3 +61,16 @@ When the user opens this project for the first time:
 - Community early-access mirror (Pro): https://github.com/AI-Marketing-Hub
 - Pattern source: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 - Cross-reference: https://github.com/kepano/obsidian-skills (authoritative Obsidian-specific skills)
+
+## Engineering layer (workmind)
+
+This vault runs in **PARA mode** (`.vault-meta/mode.json`, committed) and adds an engineering layer for multi-project developer / operations / design work.
+
+**Before filing any engineering note, read `wiki/references/engineering-conventions.md`** — it defines the routing table, folder layout, frontmatter contract, and status lifecycles. Summary:
+
+- Active work: `wiki/projects/<slug>/` — each has `_project.md` (MOC) plus `bugs/`, `decisions/`, `improvements/`, `notes/`, `design/`
+- Ongoing: `wiki/areas/` (operations/runbooks, operations/incidents, design-system, team)
+- Reference: `wiki/resources/` (snippets, tools, patterns, design)
+- Done: `wiki/archives/<year>/<slug>/`
+
+Templates for `project`, `bug`, `decision`, `improvement`, `runbook`, `incident`, `design`, `meeting`, `snippet` live in `_templates/`. Every engineering note needs `type`, `project`, `status` frontmatter — the dashboards in `wiki/meta/engineering.base` key on them. `/save` files session notes into `wiki/projects/<slug>/notes/`; if the session's project is ambiguous, ask.
