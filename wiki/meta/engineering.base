@@ -27,7 +27,49 @@ properties:
     displayName: Version
   projects:
     displayName: Used By
+  team:
+    displayName: Team
+  owner_team:
+    displayName: Owner Team
+  role:
+    displayName: Role
+  area:
+    displayName: Area
 views:
+  - type: table
+    name: People
+    filters:
+      and:
+        - type == "person"
+        - status == "active"
+    groupBy:
+      property: team
+      direction: ASC
+    order:
+      - file.name
+      - role
+      - updated
+  - type: table
+    name: Service Catalog
+    filters:
+      and:
+        - type == "service"
+    groupBy:
+      property: owner_team
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - updated
+  - type: table
+    name: Processes
+    filters:
+      and:
+        - type == "process"
+    order:
+      - file.name
+      - area
+      - last_verified
   - type: table
     name: Tech Radar
     filters:

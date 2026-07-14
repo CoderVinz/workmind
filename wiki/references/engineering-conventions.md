@@ -32,13 +32,17 @@ wiki/
   areas/                    ongoing responsibilities, no end date
     operations/runbooks/    runbooks (template: runbook)
     operations/incidents/   incidents & postmortems (template: incident)
+    operations/services/    service catalog — one page per running system (template: service)
     design-system/          cross-project design language, components
-    team/                   people, processes, onboarding notes
+    team/people/            colleagues — one page per person (template: person)
+    team/teams/             org map — one page per team (template: team)
+    team/processes/         how-things-work-here (template: process)
   resources/                reference material, no action attached
     snippets/               reusable code (template: snippet)
-    tools/                  notes on tools/services/libraries
+    tools/                  technology pages + ingested docs (template: technology)
     patterns/               architecture & design patterns learned
     design/                 inspiration, external design references
+    glossary/               company jargon, acronyms, domain terms (template: glossary)
   archives/<year>/<slug>/   completed projects, moved wholesale from projects/
 ```
 
@@ -58,6 +62,11 @@ wiki/
 | Tech enters the stack | `technology` | `resources/tools/<name>.md` (one page per technology) |
 | Docs ingested for a tech | source note | `resources/tools/docs/<name>-<topic>.md`, linked from the tech page |
 | Learned a pattern | concept/source | `resources/patterns/` |
+| Met/learned about a colleague | `person` | `areas/team/people/<Name>.md` |
+| Learned about a team | `team` | `areas/team/teams/<name>.md` |
+| New service/system encountered | `service` | `areas/operations/services/<name>.md` |
+| New jargon/acronym heard | `glossary` | `resources/glossary/<term>.md` |
+| Figured out a company process | `process` | `areas/team/processes/<name>.md` |
 | Project finished | — | move `projects/<slug>/` → `archives/<year>/<slug>/`, set `_project.md` status: archived |
 
 Cross-project note → `project: cross`. Unsure which project → ask, don't guess.
@@ -87,6 +96,18 @@ Rules:
 - Bugs caused by a tech's behavior link both ways (bug note ↔ tech page Gotchas).
 
 Dashboard: engineering.base "Tech Radar" view (grouped by category).
+
+## Org map: people, teams, services, glossary, processes
+
+The "who/what/how" layer — highest-value queries a work brain answers: *who owns X, who do I ask about Y, what does term Z mean, how do we deploy*.
+
+- **People** (`areas/team/people/`): factual and professional only — role, expertise, what they own, how to engage. Rule: nothing you wouldn't be comfortable with the person reading. No opinions, no performance judgments. Interaction log = context ("agreed Y on date"), not surveillance.
+- **Teams** (`areas/team/teams/`): mission, members (wikilink person pages), owned services, intake process. Members list is the join point — person pages point back via `team:`.
+- **Services** (`areas/operations/services/`): one page per running system. Distinct from technology pages: postgres = technology (`resources/tools/`), billing-db = service (an instance, with an owner and incidents). Services wikilink their `tech:`, `owner_team:`, runbooks, and incident notes — incidents and runbooks link back. "Who to page" lives here.
+- **Glossary** (`resources/glossary/`): one page per term, cheap to capture the moment jargon appears in a meeting. Ask-don't-guess: if the agent meets an unknown acronym in a session, it should check the glossary before asking.
+- **Processes** (`areas/team/processes/`): deploy flow, access requests, release rituals. Like runbooks but organizational. Bump `last_verified` when followed successfully.
+
+Everything wikilinks: person → team → services → tech → projects → bugs/incidents. wiki-query walks these chains, so a well-linked page multiplies the value of every other page.
 
 ## Starting a new project
 

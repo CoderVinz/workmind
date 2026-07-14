@@ -69,8 +69,8 @@ This vault runs in **PARA mode** (`.vault-meta/mode.json`, committed) and adds a
 **Before filing any engineering note, read `wiki/references/engineering-conventions.md`** — it defines the routing table, folder layout, frontmatter contract, and status lifecycles. Summary:
 
 - Active work: `wiki/projects/<slug>/` — each has `_project.md` (MOC) plus `bugs/`, `decisions/`, `improvements/`, `notes/`, `design/`
-- Ongoing: `wiki/areas/` (operations/runbooks, operations/incidents, design-system, team)
-- Reference: `wiki/resources/` (snippets, tools, patterns, design)
+- Ongoing: `wiki/areas/` (operations: runbooks/incidents/services; team: people/teams/processes; design-system)
+- Reference: `wiki/resources/` (snippets, tools/technology pages, patterns, design, glossary)
 - Done: `wiki/archives/<year>/<slug>/`
 
 Templates for `project`, `bug`, `decision`, `improvement`, `runbook`, `incident`, `design`, `meeting`, `snippet` live in `_templates/`. Every engineering note needs `type`, `project`, `status` frontmatter — the dashboards in `wiki/meta/engineering.base` key on them. `/save` files session notes into `wiki/projects/<slug>/notes/`; if the session's project is ambiguous, ask.
