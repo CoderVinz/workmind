@@ -21,7 +21,27 @@ properties:
     displayName: Updated
   last_verified:
     displayName: Last Verified
+  category:
+    displayName: Category
+  version:
+    displayName: Version
+  projects:
+    displayName: Used By
 views:
+  - type: table
+    name: Tech Radar
+    filters:
+      and:
+        - type == "technology"
+    groupBy:
+      property: category
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - version
+      - projects
+      - updated
   - type: table
     name: Active Projects
     filters:

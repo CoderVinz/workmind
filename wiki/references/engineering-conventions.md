@@ -55,7 +55,9 @@ wiki/
 | Documented a procedure | `runbook` | `areas/operations/runbooks/<service>-<action>.md` |
 | UI/UX spec or exploration | `design` | `projects/<slug>/design/` or `areas/design-system/` |
 | Reusable code worth keeping | `snippet` | `resources/snippets/<slug>.md` |
-| Learned a tool/library/pattern | concept/source | `resources/tools/` or `resources/patterns/` |
+| Tech enters the stack | `technology` | `resources/tools/<name>.md` (one page per technology) |
+| Docs ingested for a tech | source note | `resources/tools/docs/<name>-<topic>.md`, linked from the tech page |
+| Learned a pattern | concept/source | `resources/patterns/` |
 | Project finished | — | move `projects/<slug>/` → `archives/<year>/<slug>/`, set `_project.md` status: archived |
 
 Cross-project note → `project: cross`. Unsure which project → ask, don't guess.
@@ -72,6 +74,19 @@ Status lifecycles:
 - incident: `open → resolved → postmortem-done` (action items link to improvement/bug notes)
 - design: `exploring → spec → shipped`
 - runbook: `evergreen`, bump `last_verified` whenever executed successfully
+
+## Technology pages
+
+One page per technology in the stack: `resources/tools/<name>.md` from `_templates/technology.md`. This is the inventory — languages, frameworks, libraries, databases, infra, services, design tools.
+
+Rules:
+
+- `projects:` frontmatter lists every project slug using it; the "What we use it for" table explains purpose per project. Keep both in sync with each `_project.md` `stack:` field (stack entries are wikilinks to tech pages).
+- `status:` is radar-style: `trial → adopted → deprecated → retired`. Deprecating a tech → link the [[decision]] that killed it.
+- **Ingesting documentation for a tech** ("ingest <url> for <tech>"): run wiki-ingest/defuddle as usual, file the source note under `resources/tools/docs/`, then update the tech page — append the source to `sources:` and "## Ingested documentation", and fold anything that changes how we use it into "## How we use it" / "## Gotchas". The tech page stays the single readable summary; source notes hold the detail.
+- Bugs caused by a tech's behavior link both ways (bug note ↔ tech page Gotchas).
+
+Dashboard: engineering.base "Tech Radar" view (grouped by category).
 
 ## Starting a new project
 
