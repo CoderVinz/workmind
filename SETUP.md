@@ -43,10 +43,10 @@ WSL side: `git`, `nodejs` (LTS), `python3`, `make` via the distro package manage
 
 ## 3. Clone — fetch-only remote
 
-The repo is private under `CoderVinz/workmind`. Do NOT do a full personal GitHub login on the work laptop. Instead use a fine-grained personal access token created on the personal machine, scoped to **only this repo, Contents: read-only**:
+The repo is public — no GitHub credentials needed on the work laptop, ever:
 
 ```bash
-git clone https://<PAT>@github.com/CoderVinz/workmind.git "$VAULT_WSL"
+git clone https://github.com/CoderVinz/workmind.git "$VAULT_WSL"
 ```
 
 Then lock it down:
@@ -103,7 +103,7 @@ The `wiki` skill scaffolds structure (hot cache, index, MOCs) for the domain. Co
 
 ## 8. Changing job or laptop
 
-Nothing to migrate: work content belongs to the employer and stays (or is disposed of) per their policy. On the next machine, start again from step 0 — the system, templates, and any machinery improvements you pushed from the personal machine are all in the repo. Revoke the old PAT from the personal GitHub account.
+Nothing to migrate: work content belongs to the employer and stays (or is disposed of) per their policy. On the next machine, start again from step 0 — the system, templates, and any machinery improvements you pushed from the personal machine are all in the repo.
 
 ## Workflow reference
 
