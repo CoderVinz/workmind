@@ -1,4 +1,4 @@
-# workmind
+# tablinum
 
 Work second brain — Obsidian vault + agent wiki machinery, portable across work laptops and jobs.
 
@@ -20,7 +20,7 @@ Work second brain — Obsidian vault + agent wiki machinery, portable across wor
 ## Quick start (work laptop)
 
 ```
-git clone https://github.com/CoderVinz/workmind.git
+git clone https://github.com/CoderVinz/tablinum.git
 ```
 
 Then follow **[SETUP.md](SETUP.md)** — open the repo in your agent (opencode) and say "follow SETUP.md".

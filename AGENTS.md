@@ -62,7 +62,7 @@ When the user opens this project for the first time:
 - Pattern source: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 - Cross-reference: https://github.com/kepano/obsidian-skills (authoritative Obsidian-specific skills)
 
-## Engineering layer (workmind)
+## Engineering layer (tablinum)
 
 This vault runs in **PARA mode** (`.vault-meta/mode.json`, committed) and adds an engineering layer for multi-project developer / operations / design work.
 

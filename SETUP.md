@@ -1,6 +1,6 @@
 # SETUP — Work Laptop Bootstrap
 
-Instructions for setting up a work laptop into the workmind system: Obsidian on Windows, opencode (or another Agent Skills-compatible agent) in WSL2, vault on the Windows filesystem.
+Instructions for setting up a work laptop into the tablinum system: Obsidian on Windows, opencode (or another Agent Skills-compatible agent) in WSL2, vault on the Windows filesystem.
 
 Written for an AI agent: if you are an agent reading this on a fresh machine, fill the settings from the user, execute the steps top to bottom, verify each, and report what was done. A human can follow them manually too.
 
@@ -15,8 +15,8 @@ Customize per laptop / per job. Ask the user for anything not derivable.
 | Setting | Value | Notes |
 |---------|-------|-------|
 | `WIN_USER` | `<windows username>` | `cmd.exe /c "echo %USERNAME%"` from WSL |
-| `VAULT_WIN` | `C:\Users\<WIN_USER>\Git\workmind` | Windows path — what Obsidian opens |
-| `VAULT_WSL` | `/mnt/c/Users/<WIN_USER>/Git/workmind` | Same folder from WSL — what the agent opens |
+| `VAULT_WIN` | `C:\Users\<WIN_USER>\Git\tablinum` | Windows path — what Obsidian opens |
+| `VAULT_WSL` | `/mnt/c/Users/<WIN_USER>/Git/tablinum` | Same folder from WSL — what the agent opens |
 | `GIT_NAME` / `GIT_EMAIL` | `<work identity>` | Work name + work email — NOT the personal identity |
 | `AGENT` | `opencode` | Or `claude-code`, `codex` — affects step 4 symlink target |
 | `WIKI_TOPIC` | `<one sentence>` | What this brain is about, e.g. "my work as a backend engineer at Acme on payments infra" — used to scaffold in step 6 |
@@ -32,7 +32,7 @@ Steps are idempotent — check what exists, skip what is done:
 command -v git node                      # required in WSL
 command -v python3 make                  # needed for retrieval tooling (scripts/, Makefile)
 ls "$VAULT_WSL" 2>/dev/null              # vault cloned?
-ls ~/.opencode/skills/workmind 2>/dev/null  # skills linked?
+ls ~/.opencode/skills/tablinum 2>/dev/null  # skills linked?
 ```
 
 ## 2. Prerequisites
@@ -46,7 +46,7 @@ WSL side: `git`, `nodejs` (LTS), `python3`, `make` via the distro package manage
 The repo is public — no GitHub credentials needed on the work laptop, ever:
 
 ```bash
-git clone https://github.com/CoderVinz/workmind.git "$VAULT_WSL"
+git clone https://github.com/CoderVinz/tablinum.git "$VAULT_WSL"
 ```
 
 Then lock it down:
@@ -73,7 +73,7 @@ Or manually for opencode:
 
 ```bash
 mkdir -p ~/.opencode/skills
-ln -s "$VAULT_WSL/skills" ~/.opencode/skills/workmind
+ln -s "$VAULT_WSL/skills" ~/.opencode/skills/tablinum
 ```
 
 `AGENTS.md` in the vault root is picked up automatically by opencode when working inside the repo — it covers session bootstrap (read `wiki/hot.md` first) and conventions.
@@ -104,7 +104,7 @@ Commit the scaffold locally.
 - **Commit locally, freely.** Full git history stays on this laptop. Never push (it's disabled — leave it that way).
 - **Backup**: local-only means this laptop holds the only copy of the content. Either place the vault inside a work OneDrive-synced folder, or confirm employer endpoint backup covers it. Record the choice in `BACKUP`.
 - **Machinery updates in**: `git fetch origin && git merge origin/main` (merge may touch machinery files only; content lives in paths the remote never changes).
-- **Machinery improvements out**: if you improve a skill/template here and want to keep it across jobs, redo the change in the workmind repo from the personal machine and push from there. Never from here.
+- **Machinery improvements out**: if you improve a skill/template here and want to keep it across jobs, redo the change in the tablinum repo from the personal machine and push from there. Never from here.
 - Employer policy check: opencode sends prompts/content to its configured model provider — confirm the provider and the note-taking itself are within policy before putting sensitive work information in the vault.
 
 ## 8. Changing job or laptop

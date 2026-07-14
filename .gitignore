@@ -133,7 +133,7 @@ _attachments/
 .vault-meta/mode.json
 .vault-meta/mode.*.tmp
 
-# workmind: engineering layer — committed on purpose
+# tablinum: engineering layer — committed on purpose
 !wiki/meta/engineering.base
 !.vault-meta/mode.json
 # obsidian-git ships pre-configured: auto-commit only, push/pull disabled
