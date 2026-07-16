@@ -57,9 +57,18 @@ git remote set-url --push origin DISABLED   # fetch-only: pull machinery updates
 git config user.name  "$GIT_NAME"           # work identity, repo-local
 git config user.email "$GIT_EMAIL"
 git config core.autocrlf input              # required: avoids phantom-modified CRLF churn on /mnt/c
+git config pull.rebase true                 # local content commits replay on top of machinery updates
+git config rebase.autoStash true            # Obsidian keeps the tree dirty; stash/unstash around pulls
+cp -n _templates/graph.json .obsidian/graph.json  # graph color groups per category (untracked, machine-local)
 ```
 
 Verify: `git remote -v` must show `DISABLED` as the push URL. `git push` must fail.
+
+Machine-local runtime files (`.obsidian/workspace.json`, `.obsidian/graph.json`,
+`.raw/.manifest.json`, `.vault-meta/address-counter.txt`,
+`.vault-meta/tiling-thresholds.json`) are gitignored — Obsidian and the vault
+machinery rewrite them constantly, and tracking them made every `git pull`
+collide. Never `git add -f` them.
 
 ## 4. Install skills for the agent
 
