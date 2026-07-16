@@ -1,7 +1,0 @@
-{
-  "version": 1,
-  "created": "2026-07-14",
-  "description": "Ingest delta tracker and address map for this vault. Do not hand-edit; wiki-ingest maintains this.",
-  "sources": {},
-  "address_map": {}
-}

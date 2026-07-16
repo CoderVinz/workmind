@@ -1,6 +1,10 @@
 # Obsidian
-# workspace.json is intentionally tracked — ships with pre-configured graph view
-# .obsidian/workspace.json
+# Machine-local files Obsidian/runtime rewrite constantly — untracked so pulls never collide
+.obsidian/workspace.json
+.obsidian/graph.json
+.raw/.manifest.json
+.vault-meta/address-counter.txt
+.vault-meta/tiling-thresholds.json
 .obsidian/workspace-mobile.json
 .obsidian/workspace-visual.json
 .obsidian/plugins/*/data.json
