@@ -8,6 +8,62 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
+      "query": "[\"type\":meeting]",
+      "color": {
+        "a": 1,
+        "rgb": 16744272
+      }
+    },
+    {
+      "query": "[\"type\":session]",
+      "color": {
+        "a": 1,
+        "rgb": 16766720
+      }
+    },
+    {
+      "query": "path:wiki/projects",
+      "color": {
+        "a": 1,
+        "rgb": 11633879
+      }
+    },
+    {
+      "query": "path:wiki/areas",
+      "color": {
+        "a": 1,
+        "rgb": 5163440
+      }
+    },
+    {
+      "query": "path:wiki/references",
+      "color": {
+        "a": 1,
+        "rgb": 13537656
+      }
+    },
+    {
+      "query": "path:wiki/resources",
+      "color": {
+        "a": 1,
+        "rgb": 10280190
+      }
+    },
+    {
+      "query": "path:wiki/folds",
+      "color": {
+        "a": 1,
+        "rgb": 11914920
+      }
+    },
+    {
+      "query": "path:wiki/archives",
+      "color": {
+        "a": 1,
+        "rgb": 7237230
+      }
+    },
+    {
       "query": "path:wiki/entities",
       "color": {
         "a": 1,
