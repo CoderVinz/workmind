@@ -7,6 +7,7 @@
 #   - Claude Code    : auto-discovered via .claude-plugin/ (no symlink needed)
 #   - Codex CLI      : symlink to ~/.codex/skills/tablinum
 #   - OpenCode       : symlink to ~/.opencode/skills/tablinum
+#   - Gemini CLI     : symlink to ~/.gemini/skills/tablinum
 #
 # .github/copilot-instructions.md) are already committed in the repo.
 # This script just wires up the skills directory.
@@ -63,6 +64,8 @@ link_if_missing "$SKILLS_DIR" "$HOME/.codex/skills/tablinum" "Codex CLI"
 # OpenCode
 link_if_missing "$SKILLS_DIR" "$HOME/.opencode/skills/tablinum" "OpenCode"
 
+# Gemini CLI
+link_if_missing "$SKILLS_DIR" "$HOME/.gemini/skills/tablinum" "Gemini CLI"
 
 
 
@@ -71,3 +74,4 @@ echo
 echo "To verify each agent picks up the skills:"
 echo "  - Claude Code: open the project, type /wiki"
 echo "  - Codex CLI:   codex --list-skills | grep tablinum"
+echo "  - Gemini CLI:  gemini --list-skills (if supported)"
