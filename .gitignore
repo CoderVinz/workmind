@@ -1,18 +1,15 @@
-# Obsidian
-# Machine-local files Obsidian/runtime rewrite constantly — untracked so pulls never collide
-.obsidian/workspace.json
-.obsidian/graph.json
+# Obsidian — entire live config is machine-local (Obsidian rewrites it constantly;
+# tracking any of it makes every git pull collide). Fresh clones bootstrap from
+# _templates/obsidian/ — see SETUP.md step 3.
+.obsidian/
+
+# Machine-local runtime state, same reason
 .raw/.manifest.json
 .vault-meta/address-counter.txt
 .vault-meta/tiling-thresholds.json
-.obsidian/workspace-mobile.json
-.obsidian/workspace-visual.json
-.obsidian/plugins/*/data.json
-!.obsidian/plugins/calendar/data.json
-!.obsidian/plugins/thino/data.json
 
 # Excalidraw main.js is 8MB — downloaded by setup-vault.sh, not tracked in git
-.obsidian/plugins/obsidian-excalidraw-plugin/main.js
+_templates/obsidian/plugins/obsidian-excalidraw-plugin/main.js
 
 # Large binary assets — add your own images to _attachments/images/
 # Uncomment the line below to exclude images from git (recommended for large vaults)
@@ -140,5 +137,3 @@ _attachments/
 # tablinum: engineering layer — committed on purpose
 !wiki/meta/engineering.base
 !.vault-meta/mode.json
-# obsidian-git ships pre-configured: auto-commit only, push/pull disabled
-!.obsidian/plugins/obsidian-git/data.json

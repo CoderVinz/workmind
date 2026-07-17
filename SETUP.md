@@ -59,16 +59,17 @@ git config user.email "$GIT_EMAIL"
 git config core.autocrlf input              # required: avoids phantom-modified CRLF churn on /mnt/c
 git config pull.rebase true                 # local content commits replay on top of machinery updates
 git config rebase.autoStash true            # Obsidian keeps the tree dirty; stash/unstash around pulls
-cp -n _templates/graph.json .obsidian/graph.json  # graph color groups per category (untracked, machine-local)
+cp -rn _templates/obsidian .obsidian                # bootstrap Obsidian config: plugins, settings, graph colors (untracked, machine-local after copy)
 ```
 
 Verify: `git remote -v` must show `DISABLED` as the push URL. `git push` must fail.
 
-Machine-local runtime files (`.obsidian/workspace.json`, `.obsidian/graph.json`,
-`.raw/.manifest.json`, `.vault-meta/address-counter.txt`,
+The entire `.obsidian/` directory plus runtime state files
+(`.raw/.manifest.json`, `.vault-meta/address-counter.txt`,
 `.vault-meta/tiling-thresholds.json`) are gitignored — Obsidian and the vault
-machinery rewrite them constantly, and tracking them made every `git pull`
-collide. Never `git add -f` them.
+machinery rewrite them constantly, and tracking any of them made `git pull`
+collide. The shipped Obsidian config lives in `_templates/obsidian/` and is
+copied once by the line above. Never `git add -f` anything under `.obsidian/`.
 
 ## 4. Install skills for the agent
 
