@@ -10,7 +10,7 @@ A meditation, a discipline, and a checklist. Use this skill when a problem is no
 
 The 10 principles are not a recipe. They are stages of attention. You move through them in order on the first pass, then loop back to the earlier ones as new information emerges. The discipline is in NOT skipping the awkward ones (OBSERVE-internal, ACCEPT, GROW) just because they are uncomfortable.
 
-This skill ships v1.9.0 of claude-obsidian. It is the meta-skill that informs how the other 14 skills think. Each of those skills also has a per-skill "How to think" appendix mapping these 10 stages to that skill's specific work.
+This skill ships v1.9.0 of tablinum. It is the meta-skill that informs how the other 14 skills think. Each of those skills also has a per-skill "How to think" appendix mapping these 10 stages to that skill's specific work.
 
 ---
 

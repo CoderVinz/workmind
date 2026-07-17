@@ -183,7 +183,7 @@ fi
 
 Per audit §9: methodology support is the cheapest axis to lead. Nobody else ships it. The implementation is mostly conventions + routing + templates; no new infrastructure, no new dependencies. It's the highest-ROI release in the roadmap before the bigger v2.0 (derive) + v2.5 (GUI) work.
 
-After v1.8: claude-obsidian leads on 5 of 7 axes per compass artifact. The remaining 2 (GUI ergonomics, derivative outputs) are major releases by themselves.
+After v1.8: tablinum leads on 5 of 7 axes per compass artifact. The remaining 2 (GUI ergonomics, derivative outputs) are major releases by themselves.
 
 ---
 

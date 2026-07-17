@@ -8,7 +8,7 @@ allowed-tools: Read Bash
 
 The v1.6 query path was `Read(hot.md) → Read(index.md) → Read(3-5 pages) → synthesize`. It worked, but page-level granularity loses to chunk-level granularity any time the answer lives in a specific passage rather than a whole page. The v1.7 `wiki-retrieve` skill is the chunk-level upgrade — opt-in, feature-gated, and replaces nothing if you don't run the setup.
 
-**Origin**: This skill is original to claude-obsidian. There is no upstream kepano equivalent. The technique is from [Anthropic's Sept 2024 Contextual Retrieval research](https://www.anthropic.com/news/contextual-retrieval) — we implement it as agent-skill plumbing.
+**Origin**: This skill is original to tablinum. There is no upstream kepano equivalent. The technique is from [Anthropic's Sept 2024 Contextual Retrieval research](https://www.anthropic.com/news/contextual-retrieval) — we implement it as agent-skill plumbing.
 
 ---
 

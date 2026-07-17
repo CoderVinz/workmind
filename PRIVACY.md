@@ -2,7 +2,7 @@
 
 ## Data Handling
 
-claude-obsidian is a Claude Code plugin and Obsidian vault that runs entirely on
+tablinum is a Claude Code plugin and Obsidian vault that runs entirely on
 your local machine. Your vault is plain Markdown on your own filesystem. The core
 skill does not collect, transmit, or store any personal data, and there is no
 telemetry, analytics, or usage tracking.

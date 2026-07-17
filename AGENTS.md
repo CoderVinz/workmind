@@ -1,4 +1,4 @@
-# claude-obsidian: Agent Instructions
+# tablinum: Agent Instructions
 
 This repo is a Claude Code plugin **and** an Obsidian vault that builds persistent, compounding knowledge bases using Andrej Karpathy's LLM Wiki pattern. It works with **any AI coding agent** that supports the Agent Skills standard, including Codex CLI, OpenCode, and similar.
 
@@ -10,10 +10,10 @@ All skills live in `skills/<name>/SKILL.md`. Codex / OpenCode / other Agent Skil
 
 ```bash
 # Codex CLI
-ln -s "$(pwd)/skills" ~/.codex/skills/claude-obsidian
+ln -s "$(pwd)/skills" ~/.codex/skills/tablinum
 
 # OpenCode
-ln -s "$(pwd)/skills" ~/.opencode/skills/claude-obsidian
+ln -s "$(pwd)/skills" ~/.opencode/skills/tablinum
 ```
 
 Or run the bundled installer:
@@ -57,7 +57,7 @@ When the user opens this project for the first time:
 
 ## Reference
 
-- Plugin homepage (public canonical): https://github.com/AgriciDaniel/claude-obsidian
+- Plugin homepage (public canonical): https://github.com/AgriciDaniel/tablinum
 - Community early-access mirror (Pro): https://github.com/AI-Marketing-Hub
 - Pattern source: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 - Cross-reference: https://github.com/kepano/obsidian-skills (authoritative Obsidian-specific skills)

@@ -1,4 +1,4 @@
-# claude-obsidian: Windsurf Rules
+# tablinum: Windsurf Rules
 
 This repo is a knowledge companion that builds persistent, compounding Obsidian wiki vaults using Andrej Karpathy's LLM Wiki pattern. The skills are written in the cross-platform Agent Skills format and work in Cascade alongside Claude Code.
 
@@ -11,7 +11,7 @@ This repo is a knowledge companion that builds persistent, compounding Obsidian 
 ## What's In This Repo
 
 ```
-claude-obsidian/
+tablinum/
 ├── skills/              ← 10 SKILL.md files (Agent Skills format)
 ├── hooks/               ← SessionStart, PostCompact, PostToolUse, Stop
 ├── .claude-plugin/      ← Claude Code plugin manifest
@@ -59,6 +59,6 @@ When the user opens this project in Windsurf:
 
 ## Links
 
-- https://github.com/AgriciDaniel/claude-obsidian
+- https://github.com/AgriciDaniel/tablinum
 - https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 - https://github.com/kepano/obsidian-skills

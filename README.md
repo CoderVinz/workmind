@@ -33,4 +33,4 @@ Then follow **[SETUP.md](SETUP.md)** — open the repo in your agent (opencode) 
 
 ## Credits
 
-Machinery is [claude-obsidian](https://github.com/AgriciDaniel/claude-obsidian) by AgriciDaniel (MIT), plus a `distill` skill. See `ATTRIBUTION.md` and `LICENSE`.
+Machinery is [tablinum](https://github.com/AgriciDaniel/tablinum) by AgriciDaniel (MIT), plus a `distill` skill. See `ATTRIBUTION.md` and `LICENSE`.

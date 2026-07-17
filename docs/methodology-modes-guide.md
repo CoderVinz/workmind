@@ -28,11 +28,11 @@ After picking, `wiki-ingest`, `save`, and `autoresearch` consult the mode before
 
 ## Why methodology modes exist
 
-The May 2026 compass artifact identified 5 priority gaps. claude-obsidian v1.7 closed 4 of them (substrate alignment, default transport, hybrid retrieval, multi-writer safety) and deferred the 5th — methodology support — to v1.8.
+The May 2026 compass artifact identified 5 priority gaps. tablinum v1.7 closed 4 of them (substrate alignment, default transport, hybrid retrieval, multi-writer safety) and deferred the 5th — methodology support — to v1.8.
 
 The audit §9 axis evaluation called methodology support a **TIE** in May 2026: nobody else in the Claude+Obsidian space ships it as a first-class skill. Ideaverse Pro 2.0 ($200 paid vault) ships LYT as an opinionated structure but it's a vault, not a skill set. PARA, Zettelkasten, and mode-aware routing are entirely unserved.
 
-v1.8.0 closes that gap. After this release, claude-obsidian is **#1 on 5 of 7 axes** per the compass framework (compounding wiki, multi-writer safety, retrieval architecture, license openness, methodology support). The remaining 2 (GUI ergonomics, derivative outputs) require larger releases (v2.5+ for GUI, v2.0 for derive).
+v1.8.0 closes that gap. After this release, tablinum is **#1 on 5 of 7 axes** per the compass framework (compounding wiki, multi-writer safety, retrieval architecture, license openness, methodology support). The remaining 2 (GUI ergonomics, derivative outputs) require larger releases (v2.5+ for GUI, v2.0 for derive).
 
 ---
 

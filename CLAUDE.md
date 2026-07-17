@@ -1,8 +1,8 @@
-# claude-obsidian — Claude + Obsidian Wiki Vault
+# tablinum — Claude + Obsidian Wiki Vault
 
 This folder is both a Claude Code plugin and an Obsidian vault.
 
-**Plugin name:** `claude-obsidian` (v1.7+ "Compound Vault" — see [docs/compound-vault-guide.md](docs/compound-vault-guide.md); v1.8+ adds methodology modes — see [docs/methodology-modes-guide.md](docs/methodology-modes-guide.md))
+**Plugin name:** `tablinum` (v1.7+ "Compound Vault" — see [docs/compound-vault-guide.md](docs/compound-vault-guide.md); v1.8+ adds methodology modes — see [docs/methodology-modes-guide.md](docs/methodology-modes-guide.md))
 **Skills:** `/wiki`, `/wiki-ingest`, `/wiki-query`, `/wiki-lint`, `/wiki-cli` (v1.7), `/wiki-retrieve` (v1.7, opt-in), `/wiki-mode` (v1.8)
 **Vault path:** This directory (open in Obsidian directly)
 

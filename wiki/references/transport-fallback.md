@@ -10,7 +10,7 @@ updated: 2026-05-17
 
 # Transport Fallback Decision Tree
 
-claude-obsidian v1.7+ supports four ways to read and mutate vault notes. This document is the canonical decision tree skills consult when picking one.
+tablinum v1.7+ supports four ways to read and mutate vault notes. This document is the canonical decision tree skills consult when picking one.
 
 ## Quick reference
 
@@ -88,7 +88,7 @@ bash scripts/detect-transport.sh --force
 
 ## Manual override
 
-If you have an MCP transport configured (or any other transport not in the auto-detected set) and want claude-obsidian to use it as preferred:
+If you have an MCP transport configured (or any other transport not in the auto-detected set) and want tablinum to use it as preferred:
 
 1. Open `.vault-meta/transport.json` in any editor.
 2. Set `"preferred": "mcp-obsidian"` (or `"mcpvault"`, or any custom value).

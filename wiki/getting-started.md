@@ -14,7 +14,7 @@ related:
   - "[[Wiki Map]]"
 ---
 
-# Getting Started with claude-obsidian
+# Getting Started with tablinum
 
 Welcome. This vault is your compounding knowledge base — a persistent second brain built with Claude and Obsidian.
 
