@@ -1,6 +1,8 @@
 ---
 type: meta
 title: "Sources Index"
+aliases:
+  - Sources Index
 updated: 2026-07-14
 tags:
   - meta
