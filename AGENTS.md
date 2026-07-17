@@ -74,3 +74,7 @@ This vault runs in **PARA mode** (`.vault-meta/mode.json`, committed) and adds a
 - Done: `wiki/archives/<year>/<slug>/`
 
 Templates for `project`, `bug`, `decision`, `improvement`, `runbook`, `incident`, `design`, `meeting`, `snippet` live in `_templates/`. Every engineering note needs `type`, `project`, `status` frontmatter — the dashboards in `wiki/meta/engineering.base` key on them. `/save` files session notes into `wiki/projects/<slug>/notes/`; if the session's project is ambiguous, ask.
+
+## Syncing
+
+Update machinery from the remote with `bash bin/sync.sh` (or `/sync`) — never plain `git pull`. It snapshots local state, rebases, auto-resolves conflicts (local wins for wiki content, upstream wins for machinery), and never pushes.
