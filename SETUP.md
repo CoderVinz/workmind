@@ -30,7 +30,7 @@ Steps are idempotent — check what exists, skip what is done:
 
 ```bash
 command -v git node                      # required in WSL
-command -v python3 make                  # needed for retrieval tooling (scripts/, Makefile)
+command -v python3                       # needed for retrieval tooling (scripts/)
 ls "$VAULT_WSL" 2>/dev/null              # vault cloned?
 ls ~/.opencode/skills/tablinum 2>/dev/null  # skills linked?
 ```
