@@ -8,7 +8,7 @@ tags:
   - overview
 status: developing
 related:
-  - "[[index]]"
+  - "[[Meta Index]]"
   - "[[hot]]"
   - "[[log]]"
 sources:
@@ -16,7 +16,7 @@ sources:
 
 # Wiki Overview
 
-Navigation: [[index]] | [[hot]] | [[log]] | [[dashboard]]
+Navigation: [[Meta Index]] | [[hot]] | [[log]] | [[dashboard]]
 
 ---
 

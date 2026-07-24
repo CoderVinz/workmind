@@ -7,7 +7,7 @@ tags:
   - dashboard
 status: evergreen
 related:
-  - "[[index]]"
+  - "[[Meta Index]]"
   - "[[overview]]"
   - "[[log]]"
   - "[[Concepts Index]]"
@@ -16,7 +16,7 @@ related:
 
 # Wiki Dashboard
 
-Navigation: [[index]] | [[overview]] | [[log]] | [[hot]]
+Navigation: [[Meta Index]] | [[overview]] | [[log]] | [[hot]]
 
 The dashboard uses **Obsidian Bases**. A core Obsidian feature shipped in v1.9.10 (August 2025). No plugin install required.
 

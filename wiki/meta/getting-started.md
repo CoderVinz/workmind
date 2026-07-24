@@ -7,7 +7,7 @@ tags:
   - onboarding
 status: evergreen
 related:
-  - "[[index]]"
+  - "[[Meta Index]]"
   - "[[overview]]"
   - "[[LLM Wiki Pattern]]"
   - "[[Wiki vs RAG]]"
