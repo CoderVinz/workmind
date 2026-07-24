@@ -19,7 +19,7 @@ Before mutating any vault file, consult `.vault-meta/transport.json` (auto-creat
 - **mcp-obsidian** / **mcpvault** — `mcp__obsidian-vault__write_note` and friends; see [`skills/wiki/references/mcp-setup.md`](../wiki/references/mcp-setup.md)
 - **filesystem** — Claude's `Write`/`Edit` tools with absolute vault-rooted paths (final floor; always works)
 
-Full decision tree: [`wiki/references/transport-fallback.md`](../../wiki/references/transport-fallback.md).
+Full decision tree: [`wiki/meta/transport-fallback.md`](../../wiki/meta/transport-fallback.md).
 
 ---
 
@@ -43,7 +43,7 @@ If `.vault-meta/mode.json` is absent, the router returns mode=generic paths (ide
 Mode-specific follow-up:
 - **LYT**: after filing the atomic note, update the relevant MOC (`wiki/mocs/<topic>-moc.md`) to link the new note. If no MOC exists for the topic, create one using `skills/wiki-mode/templates/lyt/moc-template.md`.
 - **Zettelkasten**: filename already includes the timestamp ID. Populate the `id:` frontmatter field to match.
-- **PARA**: source summaries land in `wiki/sources/`, entities in `wiki/entities/`, concepts in `wiki/concepts/` (see `wiki/references/engineering-conventions.md` for the full routing table). Repos also go in `wiki/sources/`.
+- **PARA**: source summaries land in `wiki/sources/`, entities in `wiki/entities/`, concepts in `wiki/concepts/` (see `wiki/meta/engineering-conventions.md` for the full routing table). Repos also go in `wiki/sources/`.
 
 ## Concurrency (v1.7+)
 

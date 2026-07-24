@@ -27,7 +27,7 @@ The research loop writes a lot — source pages, concept pages, entity pages, ma
 - **mcp-obsidian** / **mcpvault** — `mcp__obsidian-vault__write_note`
 - **filesystem** — Claude's `Write` tool with absolute path
 
-Full decision tree: [`wiki/references/transport-fallback.md`](../../wiki/references/transport-fallback.md). Web fetches (`WebFetch`/`WebSearch`) are transport-agnostic.
+Full decision tree: [`wiki/meta/transport-fallback.md`](../../wiki/meta/transport-fallback.md). Web fetches (`WebFetch`/`WebSearch`) are transport-agnostic.
 
 ---
 

@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "updated": "2026-07-24",
   "description": "Canonical wiki folder layout for tablinum. version is the migration signal: bump it whenever the layout changes, add a rename entry and/or a bin/migrations/NNN script for the change, and the laptop's migrate-structure.sh will pick it up on next sync.",
   "spine": ["wiki/index.md", "wiki/hot.md", "wiki/log.md"],
@@ -7,7 +7,6 @@
     { "path": "wiki/concepts",    "holds": "Concepts, ideas, explanations, and open questions (type: question, status tracks whether still open — pick them up later via the dashboard Open Questions view)" },
     { "path": "wiki/entities",    "holds": "People and companies/teams (the org map — everyone and every organization). NOT products, repos, or running systems." },
     { "path": "wiki/sources",     "holds": "Ingested documents / URLs, and code repositories (repo pages)" },
-    { "path": "wiki/references",  "holds": "How-to-file references (engineering-conventions, methodology-modes, transport-fallback)" },
     { "path": "wiki/projects",    "holds": "Time-bound work with an outcome" },
     { "path": "wiki/operations",  "holds": "How the systems + org run: services (catalog), runbooks, incidents/postmortems, and processes (repeatable procedures, each linking the tools it needs and the project it serves)" },
     { "path": "wiki/resources",   "holds": "Reference material: tools, snippets, patterns, glossary" },
@@ -28,6 +27,7 @@
     { "from": "wiki/areas/design-system",   "to": "wiki/design-system", "since_version": 4, "note": "dissolve areas/: design-system is top-level" },
     { "from": "wiki/processes",             "to": "wiki/operations/processes", "since_version": 5, "note": "processes fold into the operations hub" },
     { "from": "wiki/comparisons",           "to": "wiki/concepts", "since_version": 6, "note": "a comparison is a concept with a verdict" },
-    { "from": "wiki/questions",             "to": "wiki/concepts", "since_version": 8, "note": "open questions live in concepts, kept distinct by type: question" }
+    { "from": "wiki/questions",             "to": "wiki/concepts", "since_version": 8, "note": "open questions live in concepts, kept distinct by type: question" },
+    { "from": "wiki/references",            "to": "wiki/meta", "since_version": 9, "note": "the operating manual is meta, not a resources sibling" }
   ]
 }

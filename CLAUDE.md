@@ -64,7 +64,7 @@ Do NOT read the wiki for general coding questions or things already in this proj
 
 ## Transport (v1.7+)
 
-`scripts/detect-transport.sh` writes `.vault-meta/transport.json` on first run and refreshes weekly. Skills consult it before mutating the vault. Fallback chain: Obsidian CLI → mcp-obsidian → mcpvault → filesystem (always-available floor). Decision tree: [wiki/references/transport-fallback.md](wiki/references/transport-fallback.md).
+`scripts/detect-transport.sh` writes `.vault-meta/transport.json` on first run and refreshes weekly. Skills consult it before mutating the vault. Fallback chain: Obsidian CLI → mcp-obsidian → mcpvault → filesystem (always-available floor). Decision tree: [wiki/meta/transport-fallback.md](wiki/meta/transport-fallback.md).
 
 ## Concurrency (v1.7+)
 

@@ -202,7 +202,7 @@ Documented for transparency; not implemented in v1.7.0:
 
 ## Cross-reference
 
-- Decision tree for transports: [`wiki/references/transport-fallback.md`](../../wiki/references/transport-fallback.md)
+- Decision tree for transports: [`wiki/meta/transport-fallback.md`](../../wiki/meta/transport-fallback.md)
 - Concurrency policy: [`skills/wiki-ingest/SKILL.md`](../wiki-ingest/SKILL.md) §Concurrency
 - DragonScale Memory: [`wiki/concepts/DragonScale Memory.md`](../../wiki/concepts/DragonScale%20Memory.md)
 - Anthropic Contextual Retrieval research: https://www.anthropic.com/news/contextual-retrieval

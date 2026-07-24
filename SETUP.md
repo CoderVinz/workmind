@@ -97,7 +97,7 @@ ln -s "$VAULT_WSL/skills" ~/.opencode/skills/tablinum
 
 ## 6. Scaffold the wiki
 
-The vault is pre-configured in **PARA mode** (`.vault-meta/mode.json`, committed) with an engineering layer for multi-project dev/ops/design work — see `wiki/references/engineering-conventions.md` for the layout, routing table, and note lifecycles. Dashboards: open `wiki/meta/engineering.base` in Obsidian.
+The vault is pre-configured in **PARA mode** (`.vault-meta/mode.json`, committed) with an engineering layer for multi-project dev/ops/design work — see `wiki/meta/engineering-conventions.md` for the layout, routing table, and note lifecycles. Dashboards: open `wiki/meta/engineering.base` in Obsidian.
 
 In the agent, at the vault root, say:
 

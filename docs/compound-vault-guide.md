@@ -86,7 +86,7 @@ skills (wiki-ingest, wiki-query, save, autoresearch, wiki-lint):
 
 **Adopter action:** None — the detection runs automatically and refreshes after 7 days. To force a refresh: `bash scripts/detect-transport.sh --force`. To manually pin to an MCP transport, edit `.vault-meta/transport.json` and set `"manual_override": true` so the detection script leaves your edit alone.
 
-**See:** [`wiki/references/transport-fallback.md`](../wiki/references/transport-fallback.md) for the full decision tree and [`skills/wiki-cli/SKILL.md`](../skills/wiki-cli/SKILL.md) for the per-operation recipes.
+**See:** [`wiki/meta/transport-fallback.md`](../wiki/meta/transport-fallback.md) for the full decision tree and [`skills/wiki-cli/SKILL.md`](../skills/wiki-cli/SKILL.md) for the per-operation recipes.
 
 ---
 
@@ -269,7 +269,7 @@ Full plan: `~/.claude/plans/read-in-full-the-hidden-sun.md`.
 - [CHANGELOG.md](../CHANGELOG.md) — v1.7.0 entry
 - [docs/dragonscale-guide.md](dragonscale-guide.md) — DragonScale Memory extension (Mechanisms 1-4)
 - [docs/install-guide.md](install-guide.md) — installation
-- [wiki/references/transport-fallback.md](../wiki/references/transport-fallback.md) — transport decision tree
+- [wiki/meta/transport-fallback.md](../wiki/meta/transport-fallback.md) — transport decision tree
 - [wiki/concepts/DragonScale Memory.md](../wiki/concepts/DragonScale%20Memory.md) — spec
 - Anthropic Contextual Retrieval: https://www.anthropic.com/news/contextual-retrieval
 - kepano/obsidian-skills: https://github.com/kepano/obsidian-skills

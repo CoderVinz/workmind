@@ -13,7 +13,7 @@
 # inside a running claude session has reentrancy concerns). For v1.7, we detect
 # CLI + filesystem and leave MCP fields as `{"present": null, "detection": "deferred"}`.
 # Users with MCP transports configured can either edit transport.json manually or
-# follow the legacy guidance in wiki/references/mcp-setup.md.
+# follow the legacy guidance in skills/wiki/references/mcp-setup.md.
 #
 # Usage:
 #   ./scripts/detect-transport.sh             # detect and write .vault-meta/transport.json
@@ -77,7 +77,7 @@ mkdir -p "$META_DIR" || {
 # Auto-detection still runs (to refresh CLI/Obsidian-running flags for visibility),
 # but PREFERRED and CHAIN are preserved from the existing file across both the
 # normal write path AND --force runs. Documented at
-# wiki/references/transport-fallback.md §Manual override.
+# wiki/meta/transport-fallback.md §Manual override.
 MANUAL_OVERRIDE_FLAG=false
 MANUAL_OVERRIDE_PREFERRED=""
 MANUAL_OVERRIDE_CHAIN=""
@@ -198,12 +198,12 @@ snapshot() {
     "mcp_obsidian": {
       "present": null,
       "detection": "deferred",
-      "note": "v1.7 does not auto-detect MCP servers. Configure manually per wiki/references/mcp-setup.md and edit this file by hand if needed."
+      "note": "v1.7 does not auto-detect MCP servers. Configure manually per skills/wiki/references/mcp-setup.md and edit this file by hand if needed."
     },
     "mcpvault": {
       "present": null,
       "detection": "deferred",
-      "note": "v1.7 does not auto-detect MCP servers. Configure manually per wiki/references/mcp-setup.md and edit this file by hand if needed."
+      "note": "v1.7 does not auto-detect MCP servers. Configure manually per skills/wiki/references/mcp-setup.md and edit this file by hand if needed."
     }
   }
 }
@@ -226,4 +226,4 @@ log "Wrote: ${OUTPUT_FILE}"
 log "Preferred transport: ${PREFERRED}"
 $CLI_PRESENT && log "  CLI:        ${CLI_BINARY} (${CLI_VERSION_RAW})"
 log "  Filesystem: always available (Read/Write/Edit tools)"
-log "  MCP:        not auto-detected (see wiki/references/mcp-setup.md to configure)"
+log "  MCP:        not auto-detected (see skills/wiki/references/mcp-setup.md to configure)"

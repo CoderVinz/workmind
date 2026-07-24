@@ -18,7 +18,7 @@ Reads should prefer the same transport the rest of the plugin uses. Consult `.va
 - **mcp-obsidian** / **mcpvault** — `mcp__obsidian-vault__read_note`, `search_notes`; see [`skills/wiki/references/mcp-setup.md`](../wiki/references/mcp-setup.md)
 - **filesystem** — Claude's `Read` and `Glob`/`Grep` tools (final floor; always works)
 
-Full decision tree: [`wiki/references/transport-fallback.md`](../../wiki/references/transport-fallback.md). Quick mode (hot.md only) is transport-agnostic — always uses `Read`.
+Full decision tree: [`wiki/meta/transport-fallback.md`](../../wiki/meta/transport-fallback.md). Quick mode (hot.md only) is transport-agnostic — always uses `Read`.
 
 ---
 

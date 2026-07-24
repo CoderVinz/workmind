@@ -66,7 +66,7 @@ When the user opens this project for the first time:
 
 This vault runs in **PARA mode** (`.vault-meta/mode.json`, committed) and adds an engineering layer for multi-project developer / operations / design work.
 
-**Before filing any engineering note, read `wiki/references/engineering-conventions.md`** — it defines the routing table, folder layout, frontmatter contract, and status lifecycles. Summary:
+**Before filing any engineering note, read `wiki/meta/engineering-conventions.md`** — it defines the routing table, folder layout, frontmatter contract, and status lifecycles. Summary:
 
 - Active work: `wiki/projects/<slug>/` — each has `_project.md` (MOC) plus `bugs/`, `decisions/`, `improvements/`, `notes/`, `design/`
 - Ongoing ops: `wiki/operations/` (runbooks/incidents/services/processes)

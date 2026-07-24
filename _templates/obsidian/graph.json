@@ -50,13 +50,6 @@
       }
     },
     {
-      "query": "path:wiki/references",
-      "color": {
-        "a": 1,
-        "rgb": 14474410
-      }
-    },
-    {
       "query": "path:wiki/resources",
       "color": {
         "a": 1,

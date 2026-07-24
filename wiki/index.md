@@ -26,7 +26,7 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[getting-started
 | Concepts | [[Concepts Index]] | 0 |
 | Entities | [[Entities Index]] | 0 |
 | Sources | [[Sources Index]] | 0 |
-| References | [[References Index]] | 0 |
+| References | [[Meta Index]] | 0 |
 | Processes | [[Processes Index]] | 0 |
 | Projects | [[Projects Index]] | 0 |
 | Meta | [[Meta Index]] | 0 |

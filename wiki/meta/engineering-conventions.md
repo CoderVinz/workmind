@@ -7,14 +7,14 @@ tags:
   - meta
   - conventions
 related:
-  - "[[References Index]]"
+  - "[[Meta Index]]"
 ---
 
 # Engineering Conventions
 
 How this vault organizes developer / operations / design work across multiple projects. Agents: consult this before filing any engineering note. Vault mode is **PARA** (`.vault-meta/mode.json`) — organize by actionability.
 
-Navigation: [[References Index]] | [[hot]] | engineering.base (dashboards)
+Navigation: [[Meta Index]] | [[hot]] | engineering.base (dashboards)
 
 ---
 

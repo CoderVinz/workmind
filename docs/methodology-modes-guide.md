@@ -96,7 +96,7 @@ v1.8.0 closes that gap. After this release, tablinum is **#1 on 5 of 7 axes** pe
 - `wiki/concepts/<Name>.md` — concept pages
 - `wiki/archives/<year>/<note>.md` — completed projects
 
-> tablinum runs a customized PARA: the org map (`entities/`), concepts, and sources are concrete top-level folders, not nested under `resources/`. `wiki/references/engineering-conventions.md` is the authoritative routing table.
+> tablinum runs a customized PARA: the org map (`entities/`), concepts, and sources are concrete top-level folders, not nested under `resources/`. `wiki/meta/engineering-conventions.md` is the authoritative routing table.
 
 **Templates** (under `skills/wiki-mode/templates/para/`):
 - `project-template.md` — project with status / deadline / outcome / next-action

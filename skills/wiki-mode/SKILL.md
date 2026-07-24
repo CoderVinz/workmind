@@ -190,7 +190,7 @@ After v1.8: tablinum leads on 5 of 7 axes per compass artifact. The remaining 2 
 ## Cross-reference
 
 - [`docs/methodology-modes-guide.md`](../../docs/methodology-modes-guide.md) — narrative guide, when-to-use-which decision tree
-- [`wiki/references/methodology-modes.md`](../../wiki/references/methodology-modes.md) — short decision tree
+- [`wiki/meta/methodology-modes.md`](../../wiki/meta/methodology-modes.md) — short decision tree
 - [`docs/compound-vault-guide.md`](../../docs/compound-vault-guide.md) — v1.7 omnibus (v1.8 builds on this)
 
 ---
