@@ -52,7 +52,7 @@ LIST FROM "wiki/entities" WHERE !sources OR length(sources) = 0
 ### Open Questions
 
 ```dataview
-LIST FROM "wiki/questions" WHERE status = "developing" OR status = "seed" SORT updated DESC
+LIST FROM "wiki/concepts" WHERE type = "question" AND (status = "developing" OR status = "seed") SORT updated DESC
 ```
 
 ### Sources

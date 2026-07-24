@@ -7,7 +7,7 @@ allowed-tools: Read Write Edit Glob Grep
 # canvas: Visual Reference Layer
 
 The three knowledge capture layers:
-- `/save` → text synthesis (wiki/questions/, wiki/concepts/)
+- `/save` → text synthesis (wiki/concepts/)
 - `/autoresearch` → structured knowledge (wiki/sources/, wiki/concepts/)
 - `/canvas` → visual references (wiki/canvases/)
 

@@ -36,13 +36,6 @@
       }
     },
     {
-      "query": "path:wiki/questions",
-      "color": {
-        "a": 1,
-        "rgb": 5592575
-      }
-    },
-    {
       "query": "path:wiki/projects",
       "color": {
         "a": 1,

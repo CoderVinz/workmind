@@ -71,7 +71,7 @@ Do not open individual wiki pages in quick mode.
 2. **Read** `wiki/index.md` to find the most relevant pages (scan for titles and descriptions).
 3. **Read** those pages. Follow wikilinks to depth-2 for key entities. No deeper.
 4. **Synthesize** the answer in chat. Cite sources with wikilinks: `(Source: [[Page Name]])`.
-5. **Offer to file** the answer: "This analysis seems worth keeping. Should I save it as `wiki/questions/answer-name.md`?"
+5. **Offer to file** the answer: "This analysis seems worth keeping. Should I save it as `wiki/concepts/answer-name.md`?"
 6. If the question reveals a **gap**: say "I don't have enough on X. Want to find a source?"
 
 ---

@@ -140,7 +140,7 @@ LIST FROM "wiki/entities" WHERE !sources OR length(sources) = 0
 
 ## Open Questions
 ```dataview
-LIST FROM "wiki/questions" WHERE answer_quality = "draft" SORT created DESC
+LIST FROM "wiki/concepts" WHERE type = "question" AND answer_quality = "draft" SORT created DESC
 ```
 ````
 

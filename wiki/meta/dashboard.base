@@ -48,7 +48,7 @@ views:
     name: Open Questions
     filters:
       and:
-        - file.inFolder("wiki/questions")
+        - type == "question"
         - or:
             - status == "developing"
             - status == "seed"

@@ -46,7 +46,7 @@ If `.vault-meta/mode.json` is absent, the router returns mode=generic paths. **I
 Session-note writes MUST be preceded by `wiki-lock acquire`:
 
 ```bash
-NOTE_PATH="wiki/questions/<slug>.md"   # or wiki/concepts/, wiki/meta/, etc.
+NOTE_PATH="wiki/concepts/<slug>.md"   # or wiki/concepts/, wiki/meta/, etc.
 bash scripts/wiki-lock.sh acquire "$NOTE_PATH" || {
   echo "skipped: $NOTE_PATH currently locked by another writer"; exit 0
 }
@@ -66,7 +66,7 @@ Determine the best type from the conversation content:
 
 | Type | Folder | Use when |
 |------|--------|---------|
-| synthesis | wiki/questions/ | Multi-step analysis, comparison, or answer to a specific question |
+| synthesis | wiki/concepts/ | Multi-step analysis, comparison, or answer to a specific question |
 | concept | wiki/concepts/ | Explaining or defining an idea, pattern, or framework |
 | source | wiki/sources/ | Summary of external material discussed in the session |
 | decision | wiki/meta/ | Architectural, project, or strategic decision that was made |
