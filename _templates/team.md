@@ -4,6 +4,7 @@ title: "{{name}}"
 mission: ""
 channel: ""         # slack channel / mailing list
 cadence: ""         # standups, planning rhythm
+members: []         # wikilinks to the person pages on this team, e.g. [[Jane Doe]] — keep in sync with the Members table below
 created: "{{date}}"
 updated: "{{date}}"
 tags:
@@ -18,6 +19,8 @@ related: []
 (What this team is responsible for, in one paragraph.)
 
 ## Members
+
+One row per person on the team. Each `[[person]]` page sets `team: [[this team]]` so the link is bidirectional.
 
 | Person | Role |
 |---|---|

@@ -35,6 +35,8 @@ properties:
     displayName: Role
   area:
     displayName: Area
+  members:
+    displayName: Members
 views:
   - type: table
     name: People
@@ -48,6 +50,15 @@ views:
     order:
       - file.name
       - role
+      - updated
+  - type: table
+    name: Teams
+    filters:
+      and:
+        - type == "team"
+    order:
+      - file.name
+      - members
       - updated
   - type: table
     name: Service Catalog

@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "updated": "2026-07-24",
   "description": "Canonical wiki folder layout for tablinum. version is the migration signal: bump it whenever the layout changes, add a rename entry and/or a bin/migrations/NNN script for the change, and the laptop's migrate-structure.sh will pick it up on next sync.",
   "spine": ["wiki/index.md", "wiki/hot.md", "wiki/log.md"],
@@ -14,6 +14,7 @@
     { "path": "wiki/archives",    "holds": "Completed projects" },
     { "path": "wiki/questions",   "holds": "Open questions" },
     { "path": "wiki/meta",        "holds": "Vault orientation + dashboards (getting-started, overview, dashboard, *.base)" },
+    { "path": "wiki/meta/lint-reports", "holds": "Generated wiki-lint + tiling reports (lint-report-YYYY-MM-DD.md)" },
     { "path": "wiki/folds",       "holds": "DragonScale log rollups" },
     { "path": "wiki/canvases",    "holds": "Obsidian canvases" }
   ],

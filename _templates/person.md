@@ -2,7 +2,7 @@
 type: person
 title: "{{name}}"
 role: ""
-team: ""            # team slug — wikilink the team page in Related
+team: ""            # wikilink to the team page in entities/, e.g. [[Platform Team]] — the team's Members table links back
 expertise: []
 timezone: ""
 contact: ""         # slack handle / email

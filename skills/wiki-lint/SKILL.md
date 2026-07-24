@@ -9,7 +9,7 @@ description: >
 
 # wiki-lint: Wiki Health Check
 
-Run lint after every 10-15 ingests, or weekly. Ask before auto-fixing anything. Output a lint report to `wiki/meta/lint-report-YYYY-MM-DD.md`.
+Run lint after every 10-15 ingests, or weekly. Ask before auto-fixing anything. Output a lint report to `wiki/meta/lint-reports/lint-report-YYYY-MM-DD.md`.
 
 ---
 
@@ -44,7 +44,7 @@ Work through these in order:
 
 ## Lint Report Format
 
-Create at `wiki/meta/lint-report-YYYY-MM-DD.md`:
+Create at `wiki/meta/lint-reports/lint-report-YYYY-MM-DD.md` (create the `wiki/meta/lint-reports/` folder first if it does not exist):
 
 ```markdown
 ---
@@ -282,7 +282,7 @@ Inspect `/tmp/tiling-peek.json` (structured diagnostics: script path, python int
 When `TILING_READY=1`:
 
 ```bash
-./scripts/tiling-check.py --report wiki/meta/tiling-report-YYYY-MM-DD.md
+./scripts/tiling-check.py --report wiki/meta/lint-reports/tiling-report-YYYY-MM-DD.md
 REPORT_EXIT=$?
 case $REPORT_EXIT in
   0)  echo "tiling report written" ;;
@@ -390,5 +390,5 @@ When working on this skill, apply the 10-principle loop. See [`skills/think/SKIL
 | 6 | CONNECT (sys) | Tiling-check + Dataview dashboards + canvas overview — multiple lint surfaces to integrate. |
 | 7 | FEEL | A lint report should empower, not shame. Actionable items beat exhaustive catalog. |
 | 8 | ACCEPT | Some lint findings are deliberate (orphan-by-design, intentional stub). Flag, don't force. |
-| 9 | CREATE | Lint report at `wiki/meta/lint-report-YYYY-MM-DD.md` with tiered findings. |
+| 9 | CREATE | Lint report at `wiki/meta/lint-reports/lint-report-YYYY-MM-DD.md` with tiered findings. |
 | 10 | GROW | Recurring lint findings → process improvement targets, not just one-time fixes. |
