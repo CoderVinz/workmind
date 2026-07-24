@@ -9,9 +9,12 @@
     },
     "para": {
       "projects_folder": "wiki/projects/",
-      "areas_folder": "wiki/areas/",
+      "operations_folder": "wiki/operations/",
       "resources_folder": "wiki/resources/",
-      "archives_folder": "wiki/archives/"
+      "archives_folder": "wiki/archives/",
+      "sources_folder": "wiki/sources/",
+      "entities_folder": "wiki/entities/",
+      "concepts_folder": "wiki/concepts/"
     },
     "zettelkasten": {
       "id_format": "YYYYMMDDHHMMSSffffff",

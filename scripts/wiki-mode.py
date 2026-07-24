@@ -54,9 +54,12 @@ DEFAULT_CONFIG = {
         },
         "para": {
             "projects_folder": "wiki/projects/",
-            "areas_folder": "wiki/areas/",
+            "operations_folder": "wiki/operations/",
             "resources_folder": "wiki/resources/",
             "archives_folder": "wiki/archives/",
+            "sources_folder": "wiki/sources/",
+            "entities_folder": "wiki/entities/",
+            "concepts_folder": "wiki/concepts/",
         },
         "zettelkasten": {
             "id_format": "YYYYMMDDHHMMSSffffff",
@@ -169,15 +172,15 @@ def route_path(mode, content_type, name, cfg):
 
     if mode == "para":
         p = cfg["config"]["para"]
+        # tablinum layout (see wiki/references/engineering-conventions.md):
+        # concrete top-level folders, not everything-under-resources.
         mapping = {
-            # New sources land in resources/<topic>/ (we use a generic 'incoming' bucket;
-            # the user will sort into specific topics via their own workflow)
-            "source":   p["resources_folder"] + "incoming/" + slug + ".md",
-            "entity":   p["resources_folder"] + "people/" + raw + ".md",
-            "concept":  p["resources_folder"] + "concepts/" + raw + ".md",
+            "source":   p["sources_folder"] + slug + ".md",
+            "entity":   p["entities_folder"] + raw + ".md",   # preserve capitalization
+            "concept":  p["concepts_folder"] + raw + ".md",
             # Session notes land in projects/inbox/; user reroutes to specific projects
             "session":  p["projects_folder"] + "inbox/" + slug + ".md",
-            "research": p["resources_folder"] + slug + "/" + slug + ".md",
+            "research": p["concepts_folder"] + raw + ".md",
         }
         return mapping[content_type]
 
