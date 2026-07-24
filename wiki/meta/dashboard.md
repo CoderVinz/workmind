@@ -55,12 +55,6 @@ LIST FROM "wiki/entities" WHERE !sources OR length(sources) = 0
 LIST FROM "wiki/questions" WHERE status = "developing" OR status = "seed" SORT updated DESC
 ```
 
-### Comparisons
-
-```dataview
-TABLE verdict FROM "wiki/comparisons" SORT updated DESC
-```
-
 ### Sources
 
 ```dataview

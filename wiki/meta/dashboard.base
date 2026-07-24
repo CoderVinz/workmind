@@ -56,15 +56,6 @@ views:
       - file.name
       - updated
   - type: table
-    name: Comparisons
-    filters:
-      and:
-        - file.inFolder("wiki/comparisons")
-    order:
-      - file.name
-      - verdict
-      - updated
-  - type: table
     name: Sources
     filters:
       and:

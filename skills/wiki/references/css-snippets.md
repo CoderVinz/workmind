@@ -25,7 +25,6 @@ Create this file at `.obsidian/snippets/vault-colors.css` inside the vault:
 .nav-folder-title[data-path^="wiki/concepts"]    { color: var(--wiki-3); }
 .nav-folder-title[data-path^="wiki/sources"]     { color: var(--wiki-4); }
 .nav-folder-title[data-path^="wiki/questions"]   { color: var(--wiki-5); }
-.nav-folder-title[data-path^="wiki/comparisons"] { color: var(--wiki-6); }
 .nav-folder-title[data-path^="wiki/meta"]        { color: var(--wiki-7); }
 .nav-folder-title[data-path=".raw"]              { color: #808080; opacity: 0.6; }
 

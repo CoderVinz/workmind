@@ -81,7 +81,7 @@ Do not open individual wiki pages in quick mode.
 Use for synthesis questions, comparisons, or "tell me everything about X."
 
 1. Read `wiki/hot.md` and `wiki/index.md`.
-2. Identify all relevant sections (concepts, entities, sources, comparisons).
+2. Identify all relevant sections (concepts, entities, sources).
 3. Read every relevant page. No skipping.
 4. If wiki coverage is thin, offer to supplement with web search.
 5. Synthesize a comprehensive answer with full citations.

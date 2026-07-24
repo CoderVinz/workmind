@@ -89,7 +89,7 @@ v1.8.0 closes that gap. After this release, tablinum is **#1 on 5 of 7 axes** pe
 **Filing convention:**
 - `wiki/projects/<project-name>/<note>.md` — active projects
 - `wiki/projects/inbox/<note>.md` — session notes + general captures land here for triage
-- `wiki/operations/<note>.md` — ongoing ops (services, runbooks, incidents); `wiki/design-system/` for design language
+- `wiki/operations/<note>.md` — ongoing ops (services, runbooks, incidents, processes)
 - `wiki/resources/<topic>/<note>.md` — reference material (tools, snippets, patterns, glossary)
 - `wiki/sources/<note>.md` — source summaries and repos
 - `wiki/entities/<Name>.md` — people + companies/teams

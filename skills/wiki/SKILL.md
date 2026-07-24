@@ -46,7 +46,6 @@ wiki/
 │   └── _index.md
 ├── domains/            # top-level topic areas
 │   └── _index.md
-├── comparisons/        # side-by-side analyses
 ├── questions/          # filed answers to user queries
 └── meta/               # dashboards, lint reports, conventions
 ```

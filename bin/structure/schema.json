@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "updated": "2026-07-24",
   "description": "Canonical wiki folder layout for tablinum. version is the migration signal: bump it whenever the layout changes, add a rename entry and/or a bin/migrations/NNN script for the change, and the laptop's migrate-structure.sh will pick it up on next sync.",
   "spine": ["wiki/index.md", "wiki/hot.md", "wiki/log.md"],
@@ -10,11 +10,9 @@
     { "path": "wiki/references",  "holds": "How-to-file references (engineering-conventions, methodology-modes, transport-fallback)" },
     { "path": "wiki/projects",    "holds": "Time-bound work with an outcome" },
     { "path": "wiki/operations",  "holds": "How the systems + org run: services (catalog), runbooks, incidents/postmortems, and processes (repeatable procedures, each linking the tools it needs and the project it serves)" },
-    { "path": "wiki/design-system", "holds": "Cross-project design language, components, tokens" },
-    { "path": "wiki/resources",   "holds": "Reference material: tools, snippets, patterns, glossary, design" },
+    { "path": "wiki/resources",   "holds": "Reference material: tools, snippets, patterns, glossary" },
     { "path": "wiki/archives",    "holds": "Completed projects" },
     { "path": "wiki/questions",   "holds": "Open questions" },
-    { "path": "wiki/comparisons", "holds": "Comparisons" },
     { "path": "wiki/meta",        "holds": "Vault orientation + dashboards (getting-started, overview, dashboard, *.base)" },
     { "path": "wiki/folds",       "holds": "DragonScale log rollups" },
     { "path": "wiki/canvases",    "holds": "Obsidian canvases" }
@@ -28,6 +26,7 @@
     { "from": "wiki/areas/team/processes",  "to": "wiki/processes", "since_version": 3, "note": "processes are top-level now" },
     { "from": "wiki/areas/operations",      "to": "wiki/operations", "since_version": 4, "note": "dissolve areas/: operations is top-level" },
     { "from": "wiki/areas/design-system",   "to": "wiki/design-system", "since_version": 4, "note": "dissolve areas/: design-system is top-level" },
-    { "from": "wiki/processes",             "to": "wiki/operations/processes", "since_version": 5, "note": "processes fold into the operations hub" }
+    { "from": "wiki/processes",             "to": "wiki/operations/processes", "since_version": 5, "note": "processes fold into the operations hub" },
+    { "from": "wiki/comparisons",           "to": "wiki/concepts", "since_version": 6, "note": "a comparison is a concept with a verdict" }
   ]
 }

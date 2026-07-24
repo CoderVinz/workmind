@@ -23,7 +23,7 @@ related: []
 
 ## Exploration
 
-(Directions considered. Embed screenshots/Excalidraw: `![[...]]`. Link inspiration under `resources/design/`.)
+(Directions considered. Embed screenshots/Excalidraw: `![[...]]`.)
 
 ## Spec
 

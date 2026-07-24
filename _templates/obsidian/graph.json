@@ -36,7 +36,7 @@
       }
     },
     {
-      "query": "path:wiki/questions OR path:wiki/comparisons",
+      "query": "path:wiki/questions",
       "color": {
         "a": 1,
         "rgb": 5592575
@@ -50,7 +50,7 @@
       }
     },
     {
-      "query": "path:wiki/operations OR path:wiki/design-system",
+      "query": "path:wiki/operations",
       "color": {
         "a": 1,
         "rgb": 5163440
