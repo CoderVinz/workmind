@@ -145,8 +145,8 @@ LOW (N findings)
 
 NOTES
 - Brief context the owner should know but that isn't itself a finding.
-- e.g. "this commit matches the v1.7 plan §3.3; verified against
-  docs/audits/v1.7.0-audit-2026-05-17.md §5".
+- e.g. "this commit matches the v1.7 plan §3.3; verified against the
+  relevant plan/design doc".
 ```
 
 Cap the report at 800 words. If you find more than ~20 findings, you
@@ -168,6 +168,3 @@ instead of inflating the report.
   truth; everything above derives from it.
 - Compose with `superpowers:verification-before-completion` for the
   enforcement layer when working in repos that load Superpowers.
-- The audit that motivated this agent:
-  `docs/audits/v1.7.0-audit-2026-05-17.md` (in particular §3 six-cut
-  walkthrough and §10.1 BLOCKER B1 retrospective).

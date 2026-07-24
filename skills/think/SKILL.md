@@ -207,7 +207,6 @@ Every other skill in this plugin has a "How to think" appendix mapping its speci
 ## Reference
 
 - This skill is the canonical source for the 10-principle framework in this plugin.
-- Pre-push audit example using the framework as audit methodology: [`docs/audits/v1.8.0-pre-push-audit-2026-05-18.md`](../../docs/audits/v1.8.0-pre-push-audit-2026-05-18.md)
 - The framework's enforcement layer is `/best-practices` (loaded separately).
 - The skill does not modify files or execute mutations. It loads structure and discipline; what you do with that is the next decision.
 
