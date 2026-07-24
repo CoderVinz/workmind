@@ -1,0 +1,11 @@
+# Scripts MUST check out with LF endings — CRLF breaks bash/python on Linux/WSL2
+# ("#!/usr/bin/env bash\r" -> bad interpreter). This holds regardless of a
+# machine's core.autocrlf setting.
+*.sh   text eol=lf
+*.py   text eol=lf
+*.mjs  text eol=lf
+*.json text eol=lf
+
+# Markdown/base content: normalize to LF too, for cross-machine consistency
+*.md   text eol=lf
+*.base text eol=lf
