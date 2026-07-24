@@ -114,10 +114,13 @@ if ! $NO_SEED; then
           say "✓ Created wiki/mocs/ and wiki/notes/"
           ;;
         para)
-          mkdir -p "$VAULT/wiki/projects/inbox" "$VAULT/wiki/areas" \
-                   "$VAULT/wiki/resources/incoming" "$VAULT/wiki/resources/people" \
-                   "$VAULT/wiki/resources/concepts" "$VAULT/wiki/archives"
-          say "✓ Created PARA folder structure: projects/{inbox}/, areas/, resources/{incoming,people,concepts}/, archives/"
+          # tablinum's customized PARA layout (see wiki/meta/engineering-conventions.md
+          # and bin/structure/schema.json) — concrete top-level folders, not areas/
+          # or resources/{incoming,people,concepts}.
+          mkdir -p "$VAULT/wiki/projects/inbox" "$VAULT/wiki/operations" \
+                   "$VAULT/wiki/resources" "$VAULT/wiki/archives" \
+                   "$VAULT/wiki/sources" "$VAULT/wiki/entities" "$VAULT/wiki/concepts"
+          say "✓ Created PARA (tablinum) structure: projects/{inbox}/, operations/, resources/, archives/, sources/, entities/, concepts/"
           ;;
         zettelkasten)
           say "✓ Zettelkasten uses no subfolders; all notes file flat under wiki/"
