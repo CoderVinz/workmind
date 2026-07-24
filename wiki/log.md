@@ -1,7 +1,7 @@
 ---
 type: meta
 title: "Operation Log"
-updated: 2026-07-14
+updated: 2026-07-24
 tags:
   - meta
   - log
@@ -24,6 +24,5 @@ Parse recent entries: `grep "^## \[" wiki/log.md | head -10`
 
 ---
 
-## [2026-07-14] init | Vault created from tablinum template
-- Machinery: tablinum upstream + distill skill
-- Content: blank scaffold — run `/wiki` to scaffold for the work domain
+<!-- No entries yet. The wiki skills append here as the vault grows. -->
+
