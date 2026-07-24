@@ -60,7 +60,7 @@ After setting mode:
 
 - **Generic**: nothing further; v1.7 behavior preserved
 - **LYT**: create your first MOC; new ingests update MOCs automatically via wiki-ingest
-- **PARA**: process the `wiki/projects/inbox/` + `wiki/resources/incoming/` buckets periodically
+- **PARA**: process the `wiki/projects/inbox/` bucket periodically
 - **Zettelkasten**: build the parent/child relationship graph as notes accumulate; rely on Obsidian Graph view
 
 ## Cross-reference
