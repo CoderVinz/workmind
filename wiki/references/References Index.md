@@ -8,4 +8,6 @@ status: evergreen
 
 # References Index
 
-(empty — pages are filed here by the wiki skills)
+- [[engineering-conventions]] — PARA layout, routing table, note lifecycles
+- [[methodology-modes]] — quick decision tree for query modes
+- [[transport-fallback]] — vault transport chain (cli → mcp → filesystem)
