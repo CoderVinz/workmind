@@ -126,9 +126,9 @@ The routing table:
 
 | Content type | Generic | LYT | PARA | Zettelkasten |
 |---|---|---|---|---|
-| New source ingest | `wiki/sources/foo.md` | `wiki/notes/foo.md` + add to topic MOC | `wiki/resources/<topic>/foo.md` | `wiki/<ID>-foo.md` |
-| New entity | `wiki/entities/<Name>.md` | `wiki/notes/<Name>.md` + entity MOC | `wiki/resources/people/<Name>.md` | `wiki/<ID>-<name>.md` |
-| New concept | `wiki/concepts/<Name>.md` | `wiki/notes/<Name>.md` + concept MOC | `wiki/resources/concepts/<Name>.md` | `wiki/<ID>-<name>.md` |
+| New source ingest | `wiki/sources/foo.md` | `wiki/notes/foo.md` + add to topic MOC | `wiki/sources/foo.md` | `wiki/<ID>-foo.md` |
+| New entity | `wiki/entities/<Name>.md` | `wiki/notes/<Name>.md` + entity MOC | `wiki/entities/<Name>.md` | `wiki/<ID>-<name>.md` |
+| New concept | `wiki/concepts/<Name>.md` | `wiki/notes/<Name>.md` + concept MOC | `wiki/concepts/<Name>.md` | `wiki/<ID>-<name>.md` |
 | Session note (`/save`) | `wiki/sessions/<date>-<topic>.md` | `wiki/notes/<date>-<topic>.md` + session MOC | `wiki/projects/<project>/<date>-<topic>.md` | `wiki/<ID>-session-<topic>.md` |
 | Research output (`/autoresearch`) | `wiki/concepts/<topic>.md` | `wiki/notes/<topic>.md` + topic MOC | `wiki/resources/<topic>/<topic>.md` | `wiki/<ID>-<topic>.md` |
 

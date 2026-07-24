@@ -88,13 +88,15 @@ v1.8.0 closes that gap. After this release, tablinum is **#1 on 5 of 7 axes** pe
 
 **Filing convention:**
 - `wiki/projects/<project-name>/<note>.md` — active projects
-- `wiki/projects/inbox/<note>.md` — new ingests + session notes land here for triage
-- `wiki/areas/<area-name>/<note>.md` — ongoing responsibilities
-- `wiki/resources/<topic>/<note>.md` — reference material
-- `wiki/resources/incoming/<note>.md` — new sources land here for topical sorting
-- `wiki/resources/people/<Name>.md` — entity pages
-- `wiki/resources/concepts/<Name>.md` — concept pages
-- `wiki/archives/<year>/<note>.md` — completed projects, sunsetted areas
+- `wiki/projects/inbox/<note>.md` — session notes + general captures land here for triage
+- `wiki/operations/<note>.md` — ongoing ops (services, runbooks, incidents); `wiki/design-system/` for design language
+- `wiki/resources/<topic>/<note>.md` — reference material (tools, snippets, patterns, glossary)
+- `wiki/sources/<note>.md` — source summaries and repos
+- `wiki/entities/<Name>.md` — people + companies/teams
+- `wiki/concepts/<Name>.md` — concept pages
+- `wiki/archives/<year>/<note>.md` — completed projects
+
+> tablinum runs a customized PARA: the org map (`entities/`), concepts, and sources are concrete top-level folders, not nested under `resources/`. `wiki/references/engineering-conventions.md` is the authoritative routing table.
 
 **Templates** (under `skills/wiki-mode/templates/para/`):
 - `project-template.md` — project with status / deadline / outcome / next-action

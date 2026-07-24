@@ -31,7 +31,7 @@ Before creating any new wiki page, consult the vault's methodology mode via `pyt
 SRC_PATH=$(python3 scripts/wiki-mode.py route source "Karpathy 2025 LLM Wiki essay")
 # generic:      wiki/sources/Karpathy-2025-LLM-Wiki-essay.md
 # lyt:          wiki/notes/Karpathy-2025-LLM-Wiki-essay.md  (also update relevant MOC)
-# para:         wiki/resources/incoming/Karpathy-2025-LLM-Wiki-essay.md
+# para:         wiki/sources/Karpathy-2025-LLM-Wiki-essay.md
 # zettelkasten: wiki/20260517123456-Karpathy-2025-LLM-Wiki-essay.md
 
 ENT_PATH=$(python3 scripts/wiki-mode.py route entity "Andrej Karpathy")
@@ -43,7 +43,7 @@ If `.vault-meta/mode.json` is absent, the router returns mode=generic paths (ide
 Mode-specific follow-up:
 - **LYT**: after filing the atomic note, update the relevant MOC (`wiki/mocs/<topic>-moc.md`) to link the new note. If no MOC exists for the topic, create one using `skills/wiki-mode/templates/lyt/moc-template.md`.
 - **Zettelkasten**: filename already includes the timestamp ID. Populate the `id:` frontmatter field to match.
-- **PARA**: new ingests land in `wiki/resources/incoming/` by default. Do NOT auto-guess the topic; leave in incoming/ for user review.
+- **PARA**: source summaries land in `wiki/sources/`, entities in `wiki/entities/`, concepts in `wiki/concepts/` (see `wiki/references/engineering-conventions.md` for the full routing table). Repos also go in `wiki/sources/`.
 
 ## Concurrency (v1.7+)
 
