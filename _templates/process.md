@@ -2,6 +2,8 @@
 type: process
 title: "{{name}}"
 area: ""            # deploy | release | access | ticketing | hr | ...
+tools: []          # wikilinks to the resources/tools pages this process needs, e.g. [[GitHub Actions]], [[Vault]]
+project: ""        # optional: the project slug/wikilink this process serves, if any
 last_verified: "{{date}}"
 status: evergreen
 created: "{{date}}"
@@ -16,6 +18,10 @@ related: []
 ## When
 
 (Situations where this process applies.)
+
+## Tools
+
+(The systems/tools this process depends on — wikilink each to its `resources/tools/` page, and mirror them in the `tools:` frontmatter. If the process serves a specific project, wikilink its `_project.md` and set `project:`.)
 
 ## Steps
 

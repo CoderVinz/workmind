@@ -34,9 +34,10 @@ wiki/
     operations/incidents/   incidents & postmortems (template: incident)
     operations/services/    service catalog — one page per running system (template: service)
     design-system/          cross-project design language, components
-    team/processes/         how-things-work-here (template: process)
   entities/                 the org map — one page per person AND per company/team
     (people templates: person; company/team templates: team)
+  processes/                how-things-work-here (template: process), top-level —
+                            each links the tools it needs and the project it serves
   resources/                reference material, no action attached
     snippets/               reusable code (template: snippet)
     tools/                  technology pages + ingested docs (template: technology)
@@ -67,7 +68,7 @@ wiki/
 | Encountered a code repository | source | `sources/<repo>.md` |
 | New service/system encountered | `service` | `areas/operations/services/<name>.md` |
 | New jargon/acronym heard | `glossary` | `resources/glossary/<term>.md` |
-| Figured out a company process | `process` | `areas/team/processes/<name>.md` |
+| Figured out a company process | `process` | `processes/<name>.md` (link its `tools:` + `project:`) |
 | Project finished | — | move `projects/<slug>/` → `archives/<year>/<slug>/`, set `_project.md` status: archived |
 
 Cross-project note → see next section. Unsure which project → ask, don't guess.
@@ -119,7 +120,7 @@ The "who/what/how" layer — highest-value queries a work brain answers: *who ow
 - **Companies / teams** (`entities/`): mission, members (wikilink person pages), owned services, intake process. Members list is the join point — person pages point back via `team:`. People and organizations share `entities/` — it is the single org map.
 - **Services** (`areas/operations/services/`): one page per running system. Distinct from technology pages: postgres = technology (`resources/tools/`), billing-db = service (an instance, with an owner and incidents). Services wikilink their `tech:`, `owner_team:`, runbooks, and incident notes — incidents and runbooks link back. "Who to page" lives here.
 - **Glossary** (`resources/glossary/`): one page per term, cheap to capture the moment jargon appears in a meeting. Ask-don't-guess: if the agent meets an unknown acronym in a session, it should check the glossary before asking.
-- **Processes** (`areas/team/processes/`): deploy flow, access requests, release rituals. Like runbooks but organizational. Bump `last_verified` when followed successfully.
+- **Processes** (`processes/`, top-level): deploy flow, access requests, release rituals. Like runbooks but organizational. Every process wikilinks the **tools** it depends on (`resources/tools/` pages, mirrored in the `tools:` frontmatter) and, if it serves one, the **project** it belongs to (`project:` + a link to that `_project.md`). Bump `last_verified` when followed successfully.
 
 Everything wikilinks: person → team → services → tech → projects → bugs/incidents. wiki-query walks these chains, so a well-linked page multiplies the value of every other page.
 
