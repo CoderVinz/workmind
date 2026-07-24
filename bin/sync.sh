@@ -5,6 +5,24 @@
 set -u
 cd "$(git rev-parse --show-toplevel)"
 
+# After pulling machinery, tell the user (never auto-apply) if the canonical
+# wiki layout advanced past this vault's content. Migration mutates content,
+# so it is always an explicit, reviewed step — see bin/migrate-structure.sh.
+check_structure() {
+  local schema="bin/structure/schema.json" marker=".vault-meta/structure-version"
+  command -v node >/dev/null 2>&1 || return 0
+  [ -f "$schema" ] || return 0
+  local target local_v
+  target=$(node -e "console.log(require('./$schema').version)" 2>/dev/null) || return 0
+  local_v=0; [ -f "$marker" ] && local_v=$(tr -dc '0-9' < "$marker"); [ -z "$local_v" ] && local_v=0
+  if [ "${target:-0}" -gt "$local_v" ]; then
+    echo ""
+    echo "structure: layout advanced v$local_v -> v$target."
+    echo "  review + migrate your content with:  bash bin/migrate-structure.sh"
+    echo "  (dry run by default; add --apply to execute. Never auto-runs.)"
+  fi
+}
+
 # self-configure the clone (idempotent) — repo-side replacement for manual git config
 git config pull.rebase true
 git config rebase.autoStash true
@@ -15,6 +33,7 @@ git commit -qm "local vault state (auto-sync)" 2>/dev/null || true
 
 if git -c core.editor=true pull --rebase; then
   echo "sync: up to date"
+  check_structure
   exit 0
 fi
 
@@ -50,3 +69,4 @@ if in_rebase; then
   exit 1
 fi
 echo "sync: done"
+check_structure

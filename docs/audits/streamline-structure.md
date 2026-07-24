@@ -9,17 +9,12 @@ Ingestion of older wikis created duplicate/parallel folders in this vault
 `wiki/resources/`). Goal: one canonical home per page type, no duplicate
 folders, all wikilinks intact.
 
-Canonical layout (do not invent new top-level folders):
-
-| Content | Home |
-|---|---|
-| Concepts, ideas, explanations | `wiki/concepts/` |
-| People, teams, systems, orgs | `wiki/entities/` |
-| Ingested documents/URLs | `wiki/sources/` |
-| External material: tools, snippets, patterns, glossary | `wiki/resources/` |
-| Work areas (team, operations, design-system) | `wiki/areas/` |
-| Time-bound work | `wiki/projects/` |
-| Open questions / comparisons | `wiki/questions/` / `wiki/comparisons/` |
+Canonical layout: the single source of truth is `bin/structure/schema.json`
+(`folders[]`). Read it first — do not invent new top-level folders. It also
+lists declarative `renames[]`; for versioned layout changes prefer
+`bash bin/migrate-structure.sh` (deterministic). This task handles the
+*ad-hoc* drift that migration can't know about — duplicate/parallel folders
+left by ingesting older wikis.
 
 ## Steps
 
@@ -39,8 +34,8 @@ Canonical layout (do not invent new top-level folders):
    - delete now-empty non-canonical folders; leave canonical folders alone
      even when empty (they are template scaffolding)
 
-4. Rebuild the index (`node build-index.mjs` or the repo's equivalent) and
-   update `wiki/index.md` if it linked moved pages.
+4. Update `wiki/index.md` and any sub-index pages if they linked moved pages.
+   (tablinum has no build-index generator; the wiki skills maintain the index.)
 
 5. Run the wiki-lint skill; fix dead links it finds.
 

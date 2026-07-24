@@ -10,6 +10,9 @@
 # legacy-pages rollout baseline is per-vault; setup-dragonscale.sh creates it
 # with the enable-date baseline. Tracking it would ship a stale rollout date.
 .vault-meta/legacy-pages.txt
+# structure-version = which layout version THIS vault's content is at.
+# Per-machine; migrate-structure.sh bumps it. Tracking would desync peers.
+.vault-meta/structure-version
 
 # Excalidraw main.js is 8MB — downloaded by setup-vault.sh, not tracked in git
 _templates/obsidian/plugins/obsidian-excalidraw-plugin/main.js

@@ -152,3 +152,6 @@ Nothing to migrate: work content belongs to the employer and stays (or is dispos
 - Monthly: `/distill`
 - Health check: `/wiki-lint`
 - Query: "what do you know about X" / `wiki-query`
+- After `bash bin/sync.sh`: if it prints `structure: layout advanced`, run
+  `/migrate` (or `bash bin/migrate-structure.sh`) to move your content into the
+  new layout. Dry-run + reviewed + loss-proof; never auto-runs, never pushes.
