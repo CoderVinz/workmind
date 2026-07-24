@@ -1,6 +1,6 @@
 {
   "collapse-filter": false,
-  "search": "path:wiki",
+  "search": "path:wiki -path:_templates -path:skills",
   "showTags": false,
   "showAttachments": false,
   "hideUnresolved": true,
@@ -8,21 +8,49 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "[\"type\":meeting]",
+      "query": "file:index OR file:hot OR file:log",
       "color": {
         "a": 1,
-        "rgb": 16744272
+        "rgb": 16724070
       }
     },
     {
-      "query": "[\"type\":session]",
+      "query": "path:wiki/concepts",
       "color": {
         "a": 1,
         "rgb": 16766720
       }
     },
     {
+      "query": "path:wiki/entities",
+      "color": {
+        "a": 1,
+        "rgb": 5676246
+      }
+    },
+    {
+      "query": "path:wiki/sources",
+      "color": {
+        "a": 1,
+        "rgb": 6986069
+      }
+    },
+    {
+      "query": "path:wiki/questions OR path:wiki/comparisons",
+      "color": {
+        "a": 1,
+        "rgb": 5592575
+      }
+    },
+    {
       "query": "path:wiki/projects",
+      "color": {
+        "a": 1,
+        "rgb": 9764607
+      }
+    },
+    {
+      "query": "path:wiki/processes",
       "color": {
         "a": 1,
         "rgb": 11633879
@@ -39,60 +67,11 @@
       "query": "path:wiki/references",
       "color": {
         "a": 1,
-        "rgb": 13537656
-      }
-    },
-    {
-      "query": "path:wiki/resources",
-      "color": {
-        "a": 1,
-        "rgb": 10280190
-      }
-    },
-    {
-      "query": "path:wiki/folds",
-      "color": {
-        "a": 1,
-        "rgb": 11914920
-      }
-    },
-    {
-      "query": "path:wiki/archives",
-      "color": {
-        "a": 1,
-        "rgb": 7237230
-      }
-    },
-    {
-      "query": "path:wiki/entities",
-      "color": {
-        "a": 1,
-        "rgb": 12945088
-      }
-    },
-    {
-      "query": "path:wiki/concepts",
-      "color": {
-        "a": 1,
-        "rgb": 5227007
-      }
-    },
-    {
-      "query": "path:wiki/sources",
-      "color": {
-        "a": 1,
-        "rgb": 6986069
-      }
-    },
-    {
-      "query": "path:wiki/questions",
-      "color": {
-        "a": 1,
         "rgb": 14474410
       }
     },
     {
-      "query": "path:wiki/comparisons",
+      "query": "path:wiki/resources",
       "color": {
         "a": 1,
         "rgb": 13724009
@@ -102,14 +81,14 @@
       "query": "path:wiki/meta",
       "color": {
         "a": 1,
-        "rgb": 5676246
+        "rgb": 16753920
       }
     },
     {
-      "query": "path:wiki",
+      "query": "path:wiki/folds OR path:wiki/archives",
       "color": {
         "a": 1,
-        "rgb": 4473924
+        "rgb": 11914920
       }
     }
   ],
