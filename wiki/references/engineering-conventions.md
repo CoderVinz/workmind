@@ -34,9 +34,9 @@ wiki/
     operations/incidents/   incidents & postmortems (template: incident)
     operations/services/    service catalog — one page per running system (template: service)
     design-system/          cross-project design language, components
-    team/people/            colleagues — one page per person (template: person)
-    team/teams/             org map — one page per team (template: team)
     team/processes/         how-things-work-here (template: process)
+  entities/                 the org map — one page per person AND per company/team
+    (people templates: person; company/team templates: team)
   resources/                reference material, no action attached
     snippets/               reusable code (template: snippet)
     tools/                  technology pages + ingested docs (template: technology)
@@ -62,8 +62,9 @@ wiki/
 | Tech enters the stack | `technology` | `resources/tools/<name>.md` (one page per technology) |
 | Docs ingested for a tech | source note | `resources/tools/docs/<name>-<topic>.md`, linked from the tech page |
 | Learned a pattern | concept/source | `resources/patterns/` |
-| Met/learned about a colleague | `person` | `areas/team/people/<Name>.md` |
-| Learned about a team | `team` | `areas/team/teams/<name>.md` |
+| Met/learned about a person (colleague, client, partner) | `person` | `entities/<Name>.md` |
+| Learned about a company or team | `team` | `entities/<name>.md` |
+| Encountered a code repository | source | `sources/<repo>.md` |
 | New service/system encountered | `service` | `areas/operations/services/<name>.md` |
 | New jargon/acronym heard | `glossary` | `resources/glossary/<term>.md` |
 | Figured out a company process | `process` | `areas/team/processes/<name>.md` |
@@ -114,8 +115,8 @@ Dashboard: engineering.base "Tech Radar" view (grouped by category).
 
 The "who/what/how" layer — highest-value queries a work brain answers: *who owns X, who do I ask about Y, what does term Z mean, how do we deploy*.
 
-- **People** (`areas/team/people/`): factual and professional only — role, expertise, what they own, how to engage. Rule: nothing you wouldn't be comfortable with the person reading. No opinions, no performance judgments. Interaction log = context ("agreed Y on date"), not surveillance.
-- **Teams** (`areas/team/teams/`): mission, members (wikilink person pages), owned services, intake process. Members list is the join point — person pages point back via `team:`.
+- **People** (`entities/`): every person — colleagues, clients, partners. Factual and professional only — role, expertise, what they own, how to engage. Rule: nothing you wouldn't be comfortable with the person reading. No opinions, no performance judgments. Interaction log = context ("agreed Y on date"), not surveillance.
+- **Companies / teams** (`entities/`): mission, members (wikilink person pages), owned services, intake process. Members list is the join point — person pages point back via `team:`. People and organizations share `entities/` — it is the single org map.
 - **Services** (`areas/operations/services/`): one page per running system. Distinct from technology pages: postgres = technology (`resources/tools/`), billing-db = service (an instance, with an owner and incidents). Services wikilink their `tech:`, `owner_team:`, runbooks, and incident notes — incidents and runbooks link back. "Who to page" lives here.
 - **Glossary** (`resources/glossary/`): one page per term, cheap to capture the moment jargon appears in a meeting. Ask-don't-guess: if the agent meets an unknown acronym in a session, it should check the glossary before asking.
 - **Processes** (`areas/team/processes/`): deploy flow, access requests, release rituals. Like runbooks but organizational. Bump `last_verified` when followed successfully.
