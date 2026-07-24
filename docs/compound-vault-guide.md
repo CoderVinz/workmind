@@ -194,8 +194,6 @@ fi
 
 **Adopter action:** None — `wiki-lock.sh` is core in v1.7 (no opt-in). Sub-agents that don't follow the acquire/release pattern are racing against any other writer (as before — but now there's a tool to fix it).
 
-**Test coverage:** `tests/test_wiki_lock.sh` (14 hermetic assertions) and `tests/test_concurrent_write.sh` (the critical correctness gate — 10 parallel workers, no losses, no garbled lines). `make test-concurrent` and `make test-lock`.
-
 **See:** [`scripts/wiki-lock.sh`](../scripts/wiki-lock.sh) header comments for the full semantics, and `skills/wiki-ingest/SKILL.md` §Concurrency for the canonical integration pattern.
 
 ---
@@ -240,19 +238,7 @@ fi
 
 ## Tests (v1.7)
 
-`make test` runs 7 suites. All hermetic — zero network, zero ollama, zero LLM calls.
-
-| Target | File | Assertions | Coverage |
-|---|---|---|---|
-| `make test-address` | `tests/test_allocate_address.sh` | ~10 | DragonScale Mech 2 |
-| `make test-tiling` | `tests/test_tiling_check.py` | ~15 | DragonScale Mech 3 |
-| `make test-boundary` | `tests/test_boundary_score.py` | ~35 | DragonScale Mech 4 |
-| `make test-bm25` | `tests/test_bm25_index.py` | ~30 | tokenize, BM25 monotonicity, IDF |
-| `make test-retrieve` | `tests/test_retrieve.py` | 22 | cosine, rerank, end-to-end subprocess |
-| `make test-lock` | `tests/test_wiki_lock.sh` | 14 | acquire, release, age-based reap |
-| `make test-concurrent` | `tests/test_concurrent_write.sh` | 6 | **the critical multi-writer correctness gate** |
-
-The "hermetic test invariant" is preserved: nothing in `make test` requires the network, ollama, or any API key. Optional pipelines (contextual prefix with Anthropic API, rerank with ollama cosine) are tested via mocks and graceful fallbacks.
+The hermetic test suite (`tests/` + `Makefile`, ~7 suites covering the address allocator, tiling, boundary scoring, BM25, retrieve, and the multi-writer concurrency gate) is **dev tooling stripped from this fork** — it lives in the upstream repo (`AgriciDaniel/tablinum`). This fork ships runtime machinery only; run the suite from upstream if you're modifying the scripts.
 
 ---
 

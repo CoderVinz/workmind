@@ -7,6 +7,9 @@
 .raw/.manifest.json
 .vault-meta/address-counter.txt
 .vault-meta/tiling-thresholds.json
+# legacy-pages rollout baseline is per-vault; setup-dragonscale.sh creates it
+# with the enable-date baseline. Tracking it would ship a stale rollout date.
+.vault-meta/legacy-pages.txt
 
 # Excalidraw main.js is 8MB — downloaded by setup-vault.sh, not tracked in git
 _templates/obsidian/plugins/obsidian-excalidraw-plugin/main.js

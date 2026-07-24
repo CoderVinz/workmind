@@ -252,12 +252,12 @@ Do not silently overwrite old claims. Flag and let the user decide.
 
 ## Address Assignment (DragonScale Mechanism 2 MVP)
 
-**Opt-in feature**. DragonScale address assignment runs only if `scripts/allocate-address.sh` is present AND `.vault-meta/` exists. Otherwise, skip this entire section and proceed with ingest normally.
+**Opt-in feature**. DragonScale address assignment runs only if `scripts/allocate-address.sh` is present AND `.vault-meta/address-counter.txt` exists (i.e. `bash bin/setup-dragonscale.sh` has been run). Otherwise, skip this entire section and proceed with ingest normally. This gate matches `wiki-lint`'s exactly, so ingest and lint are never split-brained on whether addresses are active.
 
 **Feature detection (run at start of every ingest)**:
 
 ```bash
-if [ -x ./scripts/allocate-address.sh ] && [ -d ./.vault-meta ]; then
+if [ -x ./scripts/allocate-address.sh ] && [ -f ./.vault-meta/address-counter.txt ]; then
   DRAGONSCALE_ADDRESSES=1
 else
   DRAGONSCALE_ADDRESSES=0

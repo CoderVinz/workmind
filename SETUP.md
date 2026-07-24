@@ -117,7 +117,32 @@ Commit the scaffold locally.
 - **Machinery improvements out**: if you improve a skill/template here and want to keep it across jobs, redo the change in the tablinum repo from the personal machine and push from there. Never from here.
 - Employer policy check: opencode sends prompts/content to its configured model provider — confirm the provider and the note-taking itself are within policy before putting sensitive work information in the vault.
 
-## 8. Changing job or laptop
+## 8. DragonScale Memory (optional memory layer)
+
+DragonScale is an opt-in extension that keeps a growing vault tidy and self-linking. It is **not required** — the base vault works without it. Enable it **on this laptop** (it is machine-local; enabling on the personal box does nothing here). All its state (`address-counter.txt`, `tiling-thresholds.json`, `legacy-pages.txt`, `.raw/.manifest.json`) is gitignored and created by setup.
+
+**Enable (once, before your first ingest):**
+
+```bash
+bash bin/setup-dragonscale.sh
+```
+
+Run it **before ingesting any content**. `wiki-ingest` and `wiki-lint` both gate on `.vault-meta/address-counter.txt` — until setup creates it, addresses stay off in *both* (consistent). Enabling on a fresh vault sets the rollout baseline to today, so there is **zero backfill**: every page from now on gets a stable `address:`, nothing older is enforced.
+
+**Mechanisms and what each needs:**
+
+| Mech | What it does | Extra deps | Recommend |
+|------|--------------|-----------|-----------|
+| 1 Fold (`/wiki-fold`) | rolls up old log entries so the vault stays lean | none | **on** |
+| 2 Addresses | stable page IDs that survive renames | `flock` (standard in WSL2) | **on** |
+| 3 Tiling lint | flags near-duplicate pages via local embeddings | `python3` + `ollama` + `ollama pull nomic-embed-text` | skip unless you already run Ollama |
+| 4 Boundary autoresearch | picks frontier topics for `/autoresearch` | `python3` | only if you lean on `/autoresearch` |
+
+Mechanisms with missing deps **fail closed / no-op** — the setup script prints a sanity report showing which are live. Re-running setup is idempotent (never overwrites existing state). Mech 1 + 2 are the light, high-value pair; 3 is the only one needing the embedding stack.
+
+**Verify after enabling:** `bash bin/setup-dragonscale.sh` again — the "Sanity checks" block reports `next address`, `python3`, `ollama`, `nomic-embed` status. `/wiki-lint` will then validate addresses (uniqueness, format, post-rollout enforcement).
+
+## 9. Changing job or laptop
 
 Nothing to migrate: work content belongs to the employer and stays (or is disposed of) per their policy. On the next machine, start again from step 0 — the system, templates, and any machinery improvements you pushed from the personal machine are all in the repo.
 

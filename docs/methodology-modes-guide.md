@@ -229,5 +229,4 @@ After v1.8.0: **#1 on 5 of 7 axes per compass framework**. The remaining 2 axes 
 - [`skills/wiki-mode/SKILL.md`](../skills/wiki-mode/SKILL.md) — the skill itself
 - [`scripts/wiki-mode.py`](../scripts/wiki-mode.py) — router + config helper
 - [`bin/setup-mode.sh`](../bin/setup-mode.sh) — interactive setup
-- [`tests/test_wiki_mode.py`](../tests/test_wiki_mode.py) — hermetic test suite (15 assertions)
 - [`docs/compound-vault-guide.md`](compound-vault-guide.md) — v1.7 omnibus that v1.8 builds on
