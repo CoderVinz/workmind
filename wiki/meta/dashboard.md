@@ -10,7 +10,7 @@ related:
   - "[[index]]"
   - "[[overview]]"
   - "[[log]]"
-  - "[[concepts/_index]]"
+  - "[[Concepts Index]]"
   - "[[Compounding Knowledge]]"
 ---
 

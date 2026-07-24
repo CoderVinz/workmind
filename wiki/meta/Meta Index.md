@@ -8,4 +8,6 @@ status: evergreen
 
 # Meta Index
 
-(empty — pages are filed here by the wiki skills)
+- [[getting-started]] — orientation for a new vault
+- [[overview]] — executive summary of vault contents
+- [[dashboard]] — live Dataview queries (requires Dataview plugin)
