@@ -50,13 +50,6 @@
       }
     },
     {
-      "query": "path:wiki/processes",
-      "color": {
-        "a": 1,
-        "rgb": 11633879
-      }
-    },
-    {
       "query": "path:wiki/operations OR path:wiki/design-system",
       "color": {
         "a": 1,

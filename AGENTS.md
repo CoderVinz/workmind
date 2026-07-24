@@ -70,7 +70,7 @@ This vault runs in **PARA mode** (`.vault-meta/mode.json`, committed) and adds a
 
 - Active work: `wiki/projects/<slug>/` — each has `_project.md` (MOC) plus `bugs/`, `decisions/`, `improvements/`, `notes/`, `design/`
 - Ongoing ops: `wiki/operations/` (runbooks/incidents/services); design language: `wiki/design-system/`
-- People + companies/teams: `wiki/entities/`; repeatable procedures: `wiki/processes/`
+- People + companies/teams: `wiki/entities/`; repeatable procedures: `wiki/operations/processes/`
 - Reference: `wiki/resources/` (snippets, tools/technology pages, patterns, design, glossary)
 - Done: `wiki/archives/<year>/<slug>/`
 
