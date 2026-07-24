@@ -57,7 +57,7 @@
       }
     },
     {
-      "query": "path:wiki/areas",
+      "query": "path:wiki/operations OR path:wiki/design-system",
       "color": {
         "a": 1,
         "rgb": 5163440

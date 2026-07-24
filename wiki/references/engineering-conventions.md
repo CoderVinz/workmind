@@ -29,11 +29,11 @@ wiki/
     improvements/           future work / ideas / tech debt (template: improvement)
     notes/                  sessions (/save lands here), meetings, scratch
     design/                 design specs for this project (template: design)
-  areas/                    ongoing responsibilities, no end date
-    operations/runbooks/    runbooks (template: runbook)
-    operations/incidents/   incidents & postmortems (template: incident)
-    operations/services/    service catalog — one page per running system (template: service)
-    design-system/          cross-project design language, components
+  operations/               running-systems ops (top-level)
+    runbooks/               runbooks (template: runbook)
+    incidents/              incidents & postmortems (template: incident)
+    services/               service catalog — one page per running system (template: service)
+  design-system/            cross-project design language, components (top-level)
   entities/                 the org map — one page per person AND per company/team
     (people templates: person; company/team templates: team)
   processes/                how-things-work-here (template: process), top-level —
@@ -55,10 +55,10 @@ wiki/
 | Chose between approaches | `decision` | `projects/<slug>/decisions/YYYY-MM-DD-<slug>.md` |
 | "We should later..." / tech debt | `improvement` | `projects/<slug>/improvements/<slug>.md` |
 | Work session ended (`/save`) | session note | `projects/<slug>/notes/YYYY-MM-DD-<topic>.md` |
-| Meeting happened | `meeting` | `projects/<slug>/notes/` (project) or `areas/team/` (general) |
-| Prod broke | `incident` | `areas/operations/incidents/YYYY-MM-DD-<slug>.md` |
-| Documented a procedure | `runbook` | `areas/operations/runbooks/<service>-<action>.md` |
-| UI/UX spec or exploration | `design` | `projects/<slug>/design/` or `areas/design-system/` |
+| Meeting happened | `meeting` | `projects/<slug>/notes/` (project) or `projects/inbox/` (general, triage later) |
+| Prod broke | `incident` | `operations/incidents/YYYY-MM-DD-<slug>.md` |
+| Documented a procedure | `runbook` | `operations/runbooks/<service>-<action>.md` |
+| UI/UX spec or exploration | `design` | `projects/<slug>/design/` or `design-system/` |
 | Reusable code worth keeping | `snippet` | `resources/snippets/<slug>.md` |
 | Tech enters the stack | `technology` | `resources/tools/<name>.md` (one page per technology) |
 | Docs ingested for a tech | source note | `resources/tools/docs/<name>-<topic>.md`, linked from the tech page |
@@ -66,7 +66,7 @@ wiki/
 | Met/learned about a person (colleague, client, partner) | `person` | `entities/<Name>.md` |
 | Learned about a company or team | `team` | `entities/<name>.md` |
 | Encountered a code repository | source | `sources/<repo>.md` |
-| New service/system encountered | `service` | `areas/operations/services/<name>.md` |
+| New service/system encountered | `service` | `operations/services/<name>.md` |
 | New jargon/acronym heard | `glossary` | `resources/glossary/<term>.md` |
 | Figured out a company process | `process` | `processes/<name>.md` (link its `tools:` + `project:`) |
 | Project finished | — | move `projects/<slug>/` → `archives/<year>/<slug>/`, set `_project.md` status: archived |
@@ -77,12 +77,12 @@ Cross-project note → see next section. Unsure which project → ask, don't gue
 
 The rule: **knowledge lives once, links many times. Never duplicate a note into two projects.**
 
-- **Belongs to no project** → it doesn't go in `projects/` at all. Reusable knowledge (how something works, patterns, snippets, tech gotchas, glossary) → `resources/`. Ongoing duties (ops, team, design system) → `areas/`. Projects are only for work with an outcome and an end.
+- **Belongs to no project** → it doesn't go in `projects/` at all. Reusable knowledge (how something works, patterns, snippets, tech gotchas, glossary) → `resources/`. Ongoing ops → `operations/`; design language → `design-system/`; people/companies → `entities/`. Projects are only for work with an outcome and an end.
 - **Knowledge shared by 2+ projects** → same thing: it's reference, so it lives in `resources/` (or on the relevant technology/service page), and each `_project.md` wikilinks it. If both projects hit the same postgres quirk, that's a Gotcha on the [[postgres]] tech page, not two bug notes.
 - **A decision/bug/improvement that concretely affects 2+ projects** → file it ONCE, in the project where it surfaced (or the one owning the fix), and set `project:` to a list: `project: [slug-a, slug-b]`. Wikilink it from the other project's `_project.md`. Dashboards filter with `project.contains("slug-a")`.
 - **Promotion**: when a note written inside one project turns out to matter to a second one, promote it — move the file to `resources/` (or merge into the tech/service page), leave wikilinks from both projects. Move, don't copy; update `related:` links after moving.
 
-Litmus test when filing: "if this project ended tomorrow, is the note dead?" Dead with the project → `projects/<slug>/`. Still useful → `resources/`/`areas/`.
+Litmus test when filing: "if this project ended tomorrow, is the note dead?" Dead with the project → `projects/<slug>/`. Still useful → `resources/` / `operations/` / `design-system/`.
 
 ## Frontmatter contract
 
@@ -118,7 +118,7 @@ The "who/what/how" layer — highest-value queries a work brain answers: *who ow
 
 - **People** (`entities/`): every person — colleagues, clients, partners. Factual and professional only — role, expertise, what they own, how to engage. Rule: nothing you wouldn't be comfortable with the person reading. No opinions, no performance judgments. Interaction log = context ("agreed Y on date"), not surveillance.
 - **Companies / teams** (`entities/`): mission, members (wikilink person pages), owned services, intake process. Members list is the join point — person pages point back via `team:`. People and organizations share `entities/` — it is the single org map.
-- **Services** (`areas/operations/services/`): one page per running system. Distinct from technology pages: postgres = technology (`resources/tools/`), billing-db = service (an instance, with an owner and incidents). Services wikilink their `tech:`, `owner_team:`, runbooks, and incident notes — incidents and runbooks link back. "Who to page" lives here.
+- **Services** (`operations/services/`): one page per running system. Distinct from technology pages: postgres = technology (`resources/tools/`), billing-db = service (an instance, with an owner and incidents). Services wikilink their `tech:`, `owner_team:`, runbooks, and incident notes — incidents and runbooks link back. "Who to page" lives here.
 - **Glossary** (`resources/glossary/`): one page per term, cheap to capture the moment jargon appears in a meeting. Ask-don't-guess: if the agent meets an unknown acronym in a session, it should check the glossary before asking.
 - **Processes** (`processes/`, top-level): deploy flow, access requests, release rituals. Like runbooks but organizational. Every process wikilinks the **tools** it depends on (`resources/tools/` pages, mirrored in the `tools:` frontmatter) and, if it serves one, the **project** it belongs to (`project:` + a link to that `_project.md`). Bump `last_verified` when followed successfully.
 
@@ -136,4 +136,4 @@ Everything wikilinks: person → team → services → tech → projects → bug
 
 **Operations:** every incident within 24h while memory is fresh, runbook for anything done twice, infra/services as entity notes under `resources/tools/`, verify+bump runbooks when used.
 
-**Designer:** design explorations before they're lost to Figma history, feedback logs on the design note itself, design-system components under `areas/design-system/`, inspiration with source links under `resources/design/`.
+**Designer:** design explorations before they're lost to Figma history, feedback logs on the design note itself, design-system components under `design-system/`, inspiration with source links under `resources/design/`.

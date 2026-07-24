@@ -33,7 +33,7 @@ related: []
 
 ## Operations
 
-- Runbooks: (wikilinks into `areas/operations/runbooks/`)
+- Runbooks: (wikilinks into `operations/runbooks/`)
 - Dashboards/alerts: (URLs)
 - Who to page: [[team]] / [[person]]
 

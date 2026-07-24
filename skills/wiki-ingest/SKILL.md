@@ -173,7 +173,7 @@ Steps:
    - **people and companies/teams → `wiki/entities/`** (the org map: everyone and every organization)
    - **products and technologies → `wiki/resources/tools/`**
    - **code repositories → `wiki/sources/`**
-   - **running systems / services → `wiki/areas/operations/services/`**
+   - **running systems / services → `wiki/operations/services/`**
 5. **Create or update** concept pages for significant ideas and frameworks. Assign addresses to new concept pages.
 6. **Update** relevant domain page(s) and their `<Folder> Index.md` sub-indexes.
 7. **Update** `wiki/meta/overview.md` if the big picture changed.
