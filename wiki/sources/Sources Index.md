@@ -1,12 +1,9 @@
 ---
 type: meta
 title: "Sources Index"
-aliases:
-  - Sources Index
-updated: 2026-07-14
-tags:
-  - meta
-  - index
+updated: 2026-07-24
+tags: [meta]
+status: evergreen
 ---
 
 # Sources Index

@@ -21,8 +21,17 @@ Navigation: [[overview]] | [[log]] | [[hot]] | [[dashboard]] | [[getting-started
 
 ---
 
-Fresh vault — no content pages yet. Run `/wiki` to scaffold for your domain; the wiki skills maintain this index.
+| Section | Sub-index | Pages |
+|---------|-----------|-------|
+| Concepts | [[Concepts Index]] | 0 |
+| Entities | [[Entities Index]] | 0 |
+| Sources | [[Sources Index]] | 0 |
+| References | [[References Index]] | 0 |
+| Processes | [[Processes Index]] | 0 |
+| Projects | [[Projects Index]] | 0 |
+| Meta | [[Meta Index]] | 0 |
 
-- [[concepts/_index|Concepts]]
-- [[entities/_index|Entities]]
-- [[sources/_index|Sources]]
+---
+
+- See [[log]] for operation history
+- See [[hot]] for current session context
