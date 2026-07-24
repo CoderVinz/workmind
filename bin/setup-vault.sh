@@ -28,13 +28,20 @@ cat > "$OBSIDIAN/app.json" << 'EOF'
 {
   "userIgnoreFilters": [
     "agents/",
+    "bin/",
     "commands/",
     "hooks/",
+    "scripts/",
     "skills/",
     "_templates/",
-    "README.md",
+    "docs/",
+    "assets/",
+    "AGENTS.md",
+    "ATTRIBUTION.md",
     "CLAUDE.md",
-    "WIKI.md",
+    "GEMINI.md",
+    "README.md",
+    "SETUP.md",
     "Welcome.md"
   ]
 }
